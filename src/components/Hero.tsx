@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Code2, Megaphone, PhoneCall, ShieldCheck, Zap } from "lucide-react";
+import { ArrowRight, Code2, Megaphone, PhoneCall } from "lucide-react";
 import Link from "next/link";
 
 export default function Hero() {

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { ExternalLink, Code, BarChart3, Zap } from "lucide-react";
+import { ExternalLink, Zap } from "lucide-react";
 import { useState } from "react";
 
 const projects = [
@@ -101,7 +101,7 @@ export default function PortfolioPage() {
                         Our <span className="text-brand-primary">Work</span>
                     </motion.h1>
                     <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-                        A showcase of the engineering and marketing systems we've built to scale hundreds of businesses globally.
+                        A showcase of the engineering and marketing systems we&apos;ve built to scale hundreds of businesses globally.
                     </p>
                 </div>
             </section>
@@ -113,8 +113,8 @@ export default function PortfolioPage() {
                         key={cat}
                         onClick={() => setFilter(cat)}
                         className={`px-6 py-3 rounded-xl text-sm font-bold transition-all border ${filter === cat
-                                ? "bg-brand-primary text-white border-brand-primary shadow-[0_0_20px_rgba(37,99,235,0.4)]"
-                                : "bg-slate-950/80 text-white hover:text-brand-primary border-slate-700/50 backdrop-blur-md"
+                            ? "bg-brand-primary text-white border-brand-primary shadow-[0_0_20px_rgba(37,99,235,0.4)]"
+                            : "bg-slate-950/80 text-white hover:text-brand-primary border-slate-700/50 backdrop-blur-md"
                             }`}
                     >
                         {cat}

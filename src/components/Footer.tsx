@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Zap } from "lucide-react";
+import { Mail } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {

@@ -4,14 +4,7 @@ import { motion } from "framer-motion";
 import { CheckCircle2, Zap } from "lucide-react";
 
 export default function Offer() {
-    const benefits = [
-        "20–50 High-Intent Live Transfers",
-        "Real-time delivery to your agency",
-        "Pre-qualified for interest & payment ability",
-        "No long-term contracts for test batch",
-        "Direct connect during business hours",
-        "Dedicated support for campaign setup"
-    ];
+
 
     return (
         <section id="offer" className="py-24 px-6 relative overflow-hidden">
@@ -19,7 +12,7 @@ export default function Offer() {
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight">The Growth Ecosystem</h2>
                     <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-                        We don't just sell leads. We build the high-conversion infrastructure that powers your entire agency.
+                        We don&apos;t just sell leads. We build the high-conversion infrastructure that powers your entire agency.
                     </p>
                 </div>
 
@@ -56,7 +49,7 @@ export default function Offer() {
                             </div>
                             <div className="flex items-center gap-3">
                                 <CheckCircle2 className="w-5 h-5 text-brand-primary flex-shrink-0" />
-                                <span className="text-slate-300 font-medium font-bold">20–50 FE Live Transfers (Test Batch)</span>
+                                <span className="text-slate-300 font-medium font-bold">20–50 Live Transfers (Test Batch)</span>
                             </div>
                         </div>
 
