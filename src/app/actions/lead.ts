@@ -74,3 +74,37 @@ export async function submitWaitlist(formData: FormData) {
         return { success: false, error: "Failed to join waitlist" };
     }
 }
+
+export async function submitReferral(formData: FormData) {
+    const referrerEmail = formData.get("referrerEmail") as string;
+    const clientName = formData.get("clientName") as string;
+    const clientContact = formData.get("clientContact") as string;
+    const projectDetails = formData.get("projectDetails") as string;
+
+    try {
+        const { error } = await resend.emails.send({
+            from: "Synexis Referrals <onboarding@resend.dev>",
+            to: ["official.razalali@gmail.com"],
+            subject: `New Referral from ${referrerEmail}`,
+            html: `
+                <h1>New Project Referral</h1>
+                <p><strong>Referrer Email:</strong> ${referrerEmail}</p>
+                <hr />
+                <p><strong>Proposed Client:</strong> ${clientName}</p>
+                <p><strong>Client Contact:</strong> ${clientContact}</p>
+                <p><strong>Project Details:</strong> ${projectDetails}</p>
+                <p>Status: Eligible for 20% commission upon project closure.</p>
+            `,
+        });
+
+        if (error) {
+            console.error("Referral Error:", error);
+            return { success: false, error: error.message };
+        }
+
+        return { success: true };
+    } catch (err) {
+        console.error("Referral Error:", err);
+        return { success: false, error: "Failed to submit referral" };
+    }
+}

@@ -14,6 +14,7 @@ export default function Navbar() {
         { name: "The Ecosystem", href: "/#offer" },
         { name: "SaaS Tools", href: "/saas-tools" },
         { name: "Portfolio", href: "/portfolio" },
+        { name: "Referral", href: "/refer" },
         { name: "Careers", href: "/careers" },
         { name: "Contact", href: "/#lead-form" },
     ];
