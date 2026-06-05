@@ -39,7 +39,7 @@ export default function Careers() {
             <motion.div
                 initial={{ opacity: 0, scale: 1.1 }}
                 animate={{
-                    opacity: [0.03, 0.08, 0.03],
+                    opacity: [0.15, 0.35, 0.15],
                     scale: [1, 1.05, 1],
                     x: [0, 20, 0],
                     y: [0, -10, 0]
@@ -52,7 +52,7 @@ export default function Careers() {
                 className="fixed inset-0 pointer-events-none"
                 style={{
                     backgroundImage: `url('/careers_background_glowing.png')`,
-                    backgroundSize: '800px',
+                    backgroundSize: '1200px',
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'right bottom'
                 }}
