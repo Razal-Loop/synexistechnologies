@@ -10,7 +10,7 @@ const techStack = [
     "Zustand", "Prisma", "Redis"
 ];
 
-const WaterParticle = ({ index }: { index: number }) => (
+const WaterParticle = () => (
     <motion.div
         initial={{ y: -100, x: Math.random() * 100 + "%", opacity: 0 }}
         animate={{
@@ -80,7 +80,7 @@ export default function TechWaterfall() {
             {/* Cascading Water Streaks */}
             <div className="absolute inset-0 opacity-40">
                 {[...Array(30)].map((_, i) => (
-                    <WaterParticle key={`p-${i}`} index={i} />
+                    <WaterParticle key={`p-${i}`} />
                 ))}
             </div>
 
