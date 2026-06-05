@@ -17,7 +17,7 @@ export async function submitLead(formData: FormData) {
     const budget = formData.get("budget") as string;
 
     try {
-        const { data, error } = await resend.emails.send({
+        const { error } = await resend.emails.send({
             from: "Synexis Leads <onboarding@resend.dev>",
             to: ["official.razalali@gmail.com"], // Updated to a likely email based on corpus name, or user can change
             subject: `New Lead: ${agencyName} (${serviceType})`,

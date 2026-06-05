@@ -2,13 +2,15 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle2, Zap, Rocket, Smartphone, Globe, Megaphone, PenTool, Wrench, Layers, Layout } from "lucide-react";
+import ParticlesComponent from "./ParticlesComponent";
 
 export default function Offer() {
 
 
     return (
         <section id="offer" className="py-24 px-6 relative overflow-hidden">
-            <div className="max-w-7xl mx-auto">
+            <ParticlesComponent />
+            <div className="max-w-7xl mx-auto relative z-10">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight">The Growth Ecosystem</h2>
                     <p className="text-slate-400 text-lg max-w-2xl mx-auto">
