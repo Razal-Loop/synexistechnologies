@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ApplyModal from "@/components/ApplyModal";
 import OpenApplyModal from "@/components/OpenApplyModal";
+import TechWaterfall from "@/components/TechWaterfall";
 
 export default function Careers() {
     const [selectedPosition, setSelectedPosition] = useState<string | null>(null);
@@ -34,6 +35,7 @@ export default function Careers() {
     return (
         <main className="bg-background min-h-screen text-white relative overflow-hidden">
             <Navbar />
+            <TechWaterfall />
 
             {/* Technical Illustration Background with Animation */}
             <motion.div
