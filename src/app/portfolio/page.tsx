@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ExternalLink, Zap } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 const projects = [
     {
@@ -135,10 +136,13 @@ export default function PortfolioPage() {
                             className="group relative"
                         >
                             <div className="relative h-[400px] rounded-3xl overflow-hidden border border-slate-800 bg-slate-900/90 backdrop-blur-md">
-                                <img
+                                <Image
                                     src={project.image}
                                     alt={project.title}
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-100"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    priority={idx < 2}
+                                    className="object-cover transition-transform duration-500 group-hover:scale-110 opacity-100"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
 

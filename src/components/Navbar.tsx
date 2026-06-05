@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -24,9 +25,11 @@ export default function Navbar() {
                 className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 glass mx-4 mt-4 rounded-2xl"
             >
                 <Link href="/" className="flex items-center gap-3">
-                    <img
+                    <Image
                         src="/logo.png"
                         alt="SYNEXIS Logo"
+                        width={40}
+                        height={40}
                         className="w-8 h-8 md:w-10 md:h-10 object-contain"
                     />
                     <div className="flex flex-col">

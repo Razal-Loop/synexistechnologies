@@ -2,28 +2,38 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Send } from "lucide-react";
+import { Send, AlertCircle } from "lucide-react";
+import { submitLead } from "@/app/actions/lead";
 
 export default function LeadForm() {
     const [formState, setFormState] = useState<"idle" | "submitting" | "success">("idle");
     const [selectedService, setSelectedService] = useState("");
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const [errorMessage, setErrorMessage] = useState("");
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setFormState("submitting");
-        // Simulate submission
-        setTimeout(() => {
+        setErrorMessage("");
+
+        const formData = new FormData(e.currentTarget);
+        const result = await submitLead(formData);
+
+        if (result.success) {
             setFormState("success");
-        }, 1500);
+        } else {
+            setFormState("idle");
+            setErrorMessage(result.error || "Something went wrong. Please try again.");
+        }
     };
 
     return (
         <section id="lead-form" className="py-24 px-6">
             <div className="max-w-3xl mx-auto glass p-8 md:p-16 rounded-[3rem]">
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl font-black text-white mb-4">Reserve Your Spot</h2>
+                    <h2 className="text-4xl font-black text-white mb-4">Get Started</h2>
                     <p className="text-slate-400">
-                        Apply for a test batch of 20–50 live transfers. We only work with a limited number of agencies at a time to ensure lead quality.
+                        Tell us about your goals. We work with a select number of clients at a time to ensure exceptional quality and results.
                     </p>
                 </div>
 
@@ -46,6 +56,7 @@ export default function LeadForm() {
                                 <label className="text-sm font-semibold text-slate-300 ml-1">Agency Name</label>
                                 <input
                                     required
+                                    name="agencyName"
                                     type="text"
                                     placeholder="The Smith Agency"
                                     className="w-full bg-slate-800/50 border border-slate-700 rounded-2xl p-4 text-white focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all"
@@ -55,6 +66,7 @@ export default function LeadForm() {
                                 <label className="text-sm font-semibold text-slate-300 ml-1">Contact Name</label>
                                 <input
                                     required
+                                    name="contactName"
                                     type="text"
                                     placeholder="John Smith"
                                     className="w-full bg-slate-800/50 border border-slate-700 rounded-2xl p-4 text-white focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all"
@@ -66,6 +78,7 @@ export default function LeadForm() {
                             <label className="text-sm font-semibold text-slate-300 ml-1">Work Email</label>
                             <input
                                 required
+                                name="email"
                                 type="email"
                                 placeholder="john@smithagency.com"
                                 className="w-full bg-slate-800/50 border border-slate-700 rounded-2xl p-4 text-white focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all"
@@ -76,6 +89,7 @@ export default function LeadForm() {
                             <label className="text-sm font-semibold text-slate-300 ml-1">Phone Number</label>
                             <input
                                 required
+                                name="phone"
                                 type="tel"
                                 placeholder="(555) 000-0000"
                                 className="w-full bg-slate-800/50 border border-slate-700 rounded-2xl p-4 text-white focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all"
@@ -86,6 +100,7 @@ export default function LeadForm() {
                             <label className="text-sm font-semibold text-slate-300 ml-1">Service Type</label>
                             <select
                                 required
+                                name="serviceType"
                                 value={selectedService}
                                 onChange={(e) => setSelectedService(e.target.value)}
                                 className="w-full bg-slate-800/50 border border-slate-700 rounded-2xl p-4 text-white focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all appearance-none cursor-pointer"
@@ -94,6 +109,7 @@ export default function LeadForm() {
                                 <option value="software">Custom Software Development</option>
                                 <option value="marketing">Digital Marketing</option>
                                 <option value="transfers">Live Transfers</option>
+                                <option value="mvp">Rapid MVP Building ($699+)</option>
                             </select>
                         </div>
 
@@ -104,13 +120,31 @@ export default function LeadForm() {
                                 className="space-y-2"
                             >
                                 <label className="text-sm font-semibold text-slate-300 ml-1">Project Type</label>
-                                <select required className="w-full bg-slate-800/50 border border-slate-700 rounded-2xl p-4 text-white focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all appearance-none cursor-pointer">
+                                <select required name="projectType" className="w-full bg-slate-800/50 border border-slate-700 rounded-2xl p-4 text-white focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all appearance-none cursor-pointer">
                                     <option value="">Select project type...</option>
                                     <option value="website">Website Development</option>
                                     <option value="app">App Development</option>
                                     <option value="saas">SaaS Development</option>
                                     <option value="ai">AI Integrated System Development</option>
                                     <option value="others">Others</option>
+                                </select>
+                            </motion.div>
+                        )}
+
+                        {selectedService === "marketing" && (
+                            <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: "auto" }}
+                                className="space-y-2"
+                            >
+                                <label className="text-sm font-semibold text-slate-300 ml-1">Campaign Type</label>
+                                <select required name="campaignType" className="w-full bg-slate-800/50 border border-slate-700 rounded-2xl p-4 text-white focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all appearance-none cursor-pointer">
+                                    <option value="">Select campaign type...</option>
+                                    <option value="social">Social Media Advertising</option>
+                                    <option value="search">Search Engine Marketing (PPC)</option>
+                                    <option value="seo">SEO &amp; Content Marketing</option>
+                                    <option value="full_funnel">Full-Funnel Lead Generation</option>
+                                    <option value="other_marketing">Other</option>
                                 </select>
                             </motion.div>
                         )}
@@ -122,10 +156,29 @@ export default function LeadForm() {
                                 className="space-y-2"
                             >
                                 <label className="text-sm font-semibold text-slate-300 ml-1">Engagement Type</label>
-                                <select required className="w-full bg-slate-800/50 border border-slate-700 rounded-2xl p-4 text-white focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all appearance-none cursor-pointer">
+                                <select required name="engagementType" className="w-full bg-slate-800/50 border border-slate-700 rounded-2xl p-4 text-white focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all appearance-none cursor-pointer">
                                     <option value="">Select engagement...</option>
-                                    <option value="test_batch">Test 25-50 Live Transfers</option>
-                                    <option value="long_term">Long Term Contract</option>
+                                    <option value="pilot">Pilot Program</option>
+                                    <option value="monthly">Monthly Campaign</option>
+                                    <option value="long_term">Long-Term Partnership</option>
+                                </select>
+                            </motion.div>
+                        )}
+
+                        {selectedService === "mvp" && (
+                            <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: "auto" }}
+                                className="space-y-2"
+                            >
+                                <label className="text-sm font-semibold text-slate-300 ml-1">MVP Project Type</label>
+                                <select required name="mvpType" className="w-full bg-slate-800/50 border border-slate-700 rounded-2xl p-4 text-white focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all appearance-none cursor-pointer">
+                                    <option value="">Select MVP type...</option>
+                                    <option value="saas_mvp">SaaS MVP</option>
+                                    <option value="mobile_mvp">Mobile App MVP</option>
+                                    <option value="ai_mvp">AI Agent / Tool MVP</option>
+                                    <option value="automation_mvp">Business Automation MVP</option>
+                                    <option value="other_mvp">Other</option>
                                 </select>
                             </motion.div>
                         )}
@@ -136,6 +189,7 @@ export default function LeadForm() {
                                 <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 font-bold">$</span>
                                 <input
                                     required
+                                    name="budget"
                                     type="number"
                                     min="1000"
                                     placeholder="Enter your budget (e.g. 2500)"
@@ -143,6 +197,13 @@ export default function LeadForm() {
                                 />
                             </div>
                         </div>
+
+                        {errorMessage && (
+                            <div className="bg-red-500/10 border border-red-500/50 text-red-500 p-4 rounded-xl flex items-center gap-3 text-sm">
+                                <AlertCircle className="w-4 h-4" />
+                                {errorMessage}
+                            </div>
+                        )}
 
                         <button
                             disabled={formState === "submitting"}

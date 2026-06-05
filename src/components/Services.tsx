@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Megaphone, PhoneOutgoing } from "lucide-react";
+import { Code2, Megaphone, PhoneOutgoing, Rocket, PenTool, Wrench, Layers, Layout } from "lucide-react";
 
 export default function Services() {
     const services = [
         {
             icon: <Code2 className="w-8 h-8 text-brand-primary" />,
             title: "Custom Software",
-            description: "Bespoke software solutions tailored to your business needs, from CRM extensions to full-scale enterprise platforms."
+            description: "Production-grade Web and Mobile applications. High-performance enterprise solutions built to scale."
         },
         {
             icon: <Megaphone className="w-10 h-10" />,
@@ -19,6 +19,31 @@ export default function Services() {
             icon: <PhoneOutgoing className="w-8 h-8 text-brand-accent" />,
             title: "FE Live Transfers",
             description: "High-intent live transfers connecting agencies and solo licensing agents with pre-qualified prospects."
+        },
+        {
+            icon: <Rocket className="w-8 h-8 text-brand-primary" />,
+            title: "Rapid MVP Building",
+            description: "Go from idea to execution in record time. Professional MVP development for startups and enterprises."
+        },
+        {
+            icon: <PenTool className="w-8 h-8 text-brand-primary" />,
+            title: "Social Media Handling",
+            description: "Premium content creation and social media management. Build a dominant brand presence and engage your audience."
+        },
+        {
+            icon: <Wrench className="w-8 h-8 text-brand-primary" />,
+            title: "Maintenance & Support",
+            description: "Technical support, bug fixing, and software updates. Keeping your systems at peak performance 24/7."
+        },
+        {
+            icon: <Layers className="w-8 h-8 text-brand-primary" />,
+            title: "SaaS Development",
+            description: "Enterprise-grade multi-tenant SaaS platforms. Full-scale product architecture, security, and scaling."
+        },
+        {
+            icon: <Layout className="w-8 h-8 text-brand-primary" />,
+            title: "WordPress Sites",
+            description: "Professional WordPress development optimized for speed, SEO, and business growth."
         }
     ];
 
@@ -46,7 +71,7 @@ export default function Services() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-12">
+                <div className="grid md:grid-cols-2 gap-12">
                     {services.map((service, i) => (
                         <motion.div
                             key={i}
