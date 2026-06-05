@@ -47,3 +47,30 @@ export async function submitLead(formData: FormData) {
         return { success: false, error: "Failed to send email" };
     }
 }
+
+export async function submitWaitlist(formData: FormData) {
+    const email = formData.get("email") as string;
+
+    try {
+        const { error } = await resend.emails.send({
+            from: "Synexis Waitlist <onboarding@resend.dev>",
+            to: ["official.razalali@gmail.com"],
+            subject: `New SaaS Waitlist Entry: ${email}`,
+            html: `
+                <h1>New Waitlist Entry</h1>
+                <p><strong>Email:</strong> ${email}</p>
+                <p>This user wants early access to Synexis SaaS Tools.</p>
+            `,
+        });
+
+        if (error) {
+            console.error("Waitlist Error:", error);
+            return { success: false, error: error.message };
+        }
+
+        return { success: true };
+    } catch (err) {
+        console.error("Waitlist Error:", err);
+        return { success: false, error: "Failed to join waitlist" };
+    }
+}

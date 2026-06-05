@@ -12,6 +12,7 @@ export default function Navbar() {
     const navLinks = [
         { name: "Services", href: "/#services" },
         { name: "The Ecosystem", href: "/#offer" },
+        { name: "SaaS Tools", href: "/saas-tools" },
         { name: "Portfolio", href: "/portfolio" },
         { name: "Careers", href: "/careers" },
         { name: "Contact", href: "/#lead-form" },

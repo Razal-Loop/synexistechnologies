@@ -184,14 +184,13 @@ export default function LeadForm() {
                         )}
 
                         <div className="space-y-2">
-                            <label className="text-sm font-semibold text-slate-300 ml-1">Estimated Monthly Budget (Min $1,000)</label>
+                            <label className="text-sm font-semibold text-slate-300 ml-1">Estimated Budget</label>
                             <div className="relative">
                                 <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 font-bold">$</span>
                                 <input
                                     required
                                     name="budget"
                                     type="number"
-                                    min="1000"
                                     placeholder="Enter your budget (e.g. 2500)"
                                     className="w-full bg-slate-800/50 border border-slate-700 rounded-2xl p-4 pl-8 text-white focus:outline-none focus:ring-2 focus:ring-brand-primary transition-all"
                                 />
