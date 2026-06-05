@@ -1,40 +1,32 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Briefcase, MapPin, Clock, ArrowRight, Sparkles } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ApplyModal from "@/components/ApplyModal";
 
 export default function Careers() {
+    const [selectedPosition, setSelectedPosition] = useState<string | null>(null);
+
     const positions = [
         {
-            title: "Senior Full Stack Engineer",
-            team: "Product Development",
-            location: "Remote / Hybrid",
+            title: "Sales Agent (Live Transfers - Insurance)",
+            team: "Sales Operations",
+            location: "On-site (Rawalpindi)",
+            openings: "5 Positions",
             type: "Full-time",
-            description: "Build next-gen SaaS products and high-performance lead generation infrastructure."
+            description: "Convert high-intent insurance leads into active clients. Experience in life/health insurance is a plus."
         },
         {
-            title: "Digital Marketing Strategist",
-            team: "Growth",
-            location: "Remote",
+            title: "Software Project Closer (Sales)",
+            team: "Sales Operations",
+            location: "On-site (Rawalpindi)",
+            openings: "1 Position",
             type: "Full-time",
-            description: "Own high-budget campaigns across Meta, Google, and LinkedIn for our enterprise clients."
+            description: "Expert negotiation and closing skills required for managing high-value software project deals and enterprise solutions."
         },
-        {
-            title: "Sales Execution Manager",
-            team: "Operations",
-            location: "On-site (Regional)",
-            type: "Contract",
-            description: "Manage live transfer workflows and optimize conversion funnels for insurance and solar niches."
-        },
-        {
-            title: "Creative Content Lead",
-            team: "Design",
-            location: "Remote",
-            type: "Full-time",
-            description: "Lead our visual storytelling and social media domination strategies."
-        }
     ];
 
     return (
@@ -96,12 +88,15 @@ export default function Careers() {
                                             </div>
                                             <div className="flex items-center gap-1 text-brand-primary">
                                                 <Briefcase size={16} />
-                                                <span>Opening #00{i + 1}</span>
+                                                <span>{job.openings}</span>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <button className="flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-white text-black font-black hover:bg-brand-primary hover:text-white transition-all group/btn shrink-0">
+                                    <button
+                                        onClick={() => setSelectedPosition(job.title)}
+                                        className="flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-white text-black font-black hover:bg-brand-primary hover:text-white transition-all group/btn shrink-0"
+                                    >
                                         Apply Now
                                         <ArrowRight className="group-hover/btn:translate-x-1 transition-transform" />
                                     </button>
@@ -123,6 +118,12 @@ export default function Careers() {
                     </div>
                 </div>
             </div>
+
+            <ApplyModal
+                isOpen={!!selectedPosition}
+                onClose={() => setSelectedPosition(null)}
+                position={selectedPosition || ""}
+            />
 
             <Footer />
         </main>
