@@ -6,9 +6,11 @@ import { Briefcase, MapPin, Clock, ArrowRight, Sparkles } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ApplyModal from "@/components/ApplyModal";
+import OpenApplyModal from "@/components/OpenApplyModal";
 
 export default function Careers() {
     const [selectedPosition, setSelectedPosition] = useState<string | null>(null);
+    const [isOpenApplyOpen, setIsOpenApplyOpen] = useState(false);
 
     const positions = [
         {
@@ -109,12 +111,12 @@ export default function Careers() {
                     <div className="mt-16 p-12 rounded-3xl border-2 border-dashed border-slate-800 text-center">
                         <h4 className="text-xl font-bold mb-2">Don&apos;t see your role?</h4>
                         <p className="text-slate-500 mb-8">We&apos;re always looking for exceptional talent in Engineering, Marketing, and Sales.</p>
-                        <a
-                            href="mailto:official.razalali@gmail.com"
+                        <button
+                            onClick={() => setIsOpenApplyOpen(true)}
                             className="text-brand-primary font-black hover:underline underline-offset-4"
                         >
                             Send us an open application →
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -123,6 +125,11 @@ export default function Careers() {
                 isOpen={!!selectedPosition}
                 onClose={() => setSelectedPosition(null)}
                 position={selectedPosition || ""}
+            />
+
+            <OpenApplyModal
+                isOpen={isOpenApplyOpen}
+                onClose={() => setIsOpenApplyOpen(false)}
             />
 
             <Footer />
