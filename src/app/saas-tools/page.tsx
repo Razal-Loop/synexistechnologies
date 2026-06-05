@@ -125,13 +125,17 @@ export default function SaasTools() {
                                 </button>
                             </form>
                             {isSuccess && (
-                                <motion.p
+                                <motion.div
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    className="mt-4 text-emerald-400 font-bold"
+                                    className="mt-6 p-6 rounded-[2rem] bg-emerald-500/5 border border-emerald-500/20 text-center glass"
                                 >
-                                    Excellent. You're on the list.
-                                </motion.p>
+                                    <p className="text-emerald-400 font-black text-xl mb-1">Excellent. You're on the list.</p>
+                                    <div className="flex flex-col items-center gap-1">
+                                        <p className="text-slate-500 text-xs uppercase tracking-widest font-bold">Your Official Spot</p>
+                                        <span className="text-3xl font-black text-white">#1{Math.floor(Math.random() * 90) + 42}</span>
+                                    </div>
+                                </motion.div>
                             )}
                         </motion.div>
                     </div>
