@@ -170,7 +170,7 @@ export default function ApplyModal({ isOpen, onClose, position }: ApplyModalProp
 
                                 <div className="space-y-2">
                                     <label className="text-xs font-bold text-slate-500 uppercase flex items-center gap-2">
-                                        <Link2 size={12} /> Link to CV/Portfolio
+                                        <Link2 size={12} /> Link to CV/Portfolio (Optional)
                                     </label>
                                     <input
                                         name="cvLink"
