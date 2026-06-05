@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Hammer, Sparkles, Box, Cpu, ArrowRight } from "lucide-react";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useState } from "react";
@@ -75,7 +74,7 @@ export default function SaasTools() {
                             transition={{ delay: 0.2 }}
                             className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed"
                         >
-                            We're building a suite of high-performance tools designed to automate, optimize, and scale modern businesses. Proprietary tech, built by engineers, for growth-obsessed agencies.
+                            We&apos;re building a suite of high-performance tools designed to automate, optimize, and scale modern businesses. Proprietary tech, built by engineers, for growth-obsessed agencies.
                         </motion.p>
 
                         {/* Preview Cards */}
@@ -152,7 +151,7 @@ export default function SaasTools() {
                                         <p className="text-brand-primary font-bold">Early Access Benefit Unlocked</p>
                                         <p className="text-white font-black text-lg">$150 Launch Credit Coupon</p>
                                     </div>
-                                    <p className="mt-6 text-slate-500 text-xs italic">We'll notify you as soon as early access begins with your exclusive coupon.</p>
+                                    <p className="mt-6 text-slate-500 text-xs italic">We&apos;ll notify you as soon as early access begins with your exclusive coupon.</p>
                                 </motion.div>
                             )}
                         </motion.div>

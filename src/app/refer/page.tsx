@@ -57,7 +57,7 @@ export default function ReferPage() {
                             transition={{ delay: 0.2 }}
                             className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-12"
                         >
-                            We value our network. For every project you refer that joins our ecosystem, we'll reward you with a 20% share of the initial project value. No cap, no complexity.
+                            We value our network. For every project you refer that joins our ecosystem, we&apos;ll reward you with a 20% share of the initial project value. No cap, no complexity.
                         </motion.p>
 
                         <div className="grid md:grid-cols-3 gap-6 text-left">
