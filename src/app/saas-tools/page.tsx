@@ -107,6 +107,9 @@ export default function SaasTools() {
                             transition={{ delay: 0.6 }}
                             className="max-w-md mx-auto"
                         >
+                            <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-black uppercase tracking-widest">
+                                <span>Waitlist Reward: $150 Launch Credit</span>
+                            </div>
                             <form
                                 action={async (formData) => {
                                     setIsSubmitting(true);
@@ -145,7 +148,11 @@ export default function SaasTools() {
                                     <div className="inline-flex items-center justify-center px-10 py-4 bg-white/5 border border-white/10 rounded-2xl shadow-inner">
                                         <span className="text-5xl font-black text-white tracking-tighter">#{getWaitlistNumber()}</span>
                                     </div>
-                                    <p className="mt-6 text-slate-500 text-xs italic">We'll notify you as soon as early access begins.</p>
+                                    <div className="mt-8 p-4 rounded-2xl bg-brand-primary/10 border border-brand-primary/20">
+                                        <p className="text-brand-primary font-bold">Early Access Benefit Unlocked</p>
+                                        <p className="text-white font-black text-lg">$150 Launch Credit Coupon</p>
+                                    </div>
+                                    <p className="mt-6 text-slate-500 text-xs italic">We'll notify you as soon as early access begins with your exclusive coupon.</p>
                                 </motion.div>
                             )}
                         </motion.div>
