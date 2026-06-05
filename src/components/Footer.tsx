@@ -53,15 +53,18 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Contact */}
+                    {/* Company & Support */}
                     <div className="flex flex-col gap-6 items-center md:items-start text-center md:text-left">
-                        <h4 className="text-white font-black uppercase text-[10px] tracking-widest italic opacity-50">Get In Touch</h4>
+                        <h4 className="text-white font-black uppercase text-[10px] tracking-widest italic opacity-50">Company</h4>
                         <div className="flex flex-col gap-3">
-                            <a href="mailto:official.razalali@gmail.com" className="text-white hover:text-brand-primary text-xs transition-colors font-black flex items-center gap-2">
+                            <Link href="/careers" className="text-slate-400 hover:text-brand-primary text-xs transition-colors font-bold uppercase tracking-wider">
+                                Open Positions
+                            </Link>
+                            <a href="mailto:official.razalali@gmail.com" className="text-white hover:text-brand-primary text-xs transition-colors font-black flex items-center gap-2 mt-2">
                                 <Mail className="w-3 h-3 text-brand-primary" />
-                                official.razalali@gmail.com
+                                Support
                             </a>
-                            <p className="text-slate-600 text-[10px] mt-2 uppercase tracking-tight font-bold">24/7 Global Support Operations</p>
+                            <p className="text-slate-600 text-[10px] mt-2 uppercase tracking-tight font-bold">24/7 Global Operations</p>
                         </div>
                     </div>
                 </div>

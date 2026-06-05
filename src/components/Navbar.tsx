@@ -13,6 +13,7 @@ export default function Navbar() {
         { name: "Services", href: "/#services" },
         { name: "The Ecosystem", href: "/#offer" },
         { name: "Portfolio", href: "/portfolio" },
+        { name: "Careers", href: "/careers" },
         { name: "Contact", href: "/#lead-form" },
     ];
 
