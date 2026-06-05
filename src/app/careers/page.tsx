@@ -32,10 +32,21 @@ export default function Careers() {
     ];
 
     return (
-        <main className="bg-background min-h-screen text-white">
+        <main className="bg-background min-h-screen text-white relative overflow-hidden">
             <Navbar />
 
-            <div className="pt-32 pb-24 px-6">
+            {/* Technical Illustration Background */}
+            <div
+                className="fixed inset-0 pointer-events-none opacity-[0.03]"
+                style={{
+                    backgroundImage: `url('/careers_background_illustration_1780661966065.png')`,
+                    backgroundSize: '800px',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'right bottom'
+                }}
+            />
+
+            <div className="pt-32 pb-24 px-6 relative z-10">
                 <div className="max-w-4xl mx-auto">
                     {/* Header */}
                     <div className="text-center mb-20">
