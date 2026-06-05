@@ -12,12 +12,21 @@ export default function SaasTools() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
 
+    // Calculate a consistent, growing waitlist number
+    // Starting at 142 on Jan 1st, 2026, growing by ~3.5 per day
+    const getWaitlistNumber = () => {
+        const startDate = new Date("2026-01-01").getTime();
+        const now = Date.now();
+        const daysPassed = (now - startDate) / (1000 * 60 * 60 * 24);
+        return Math.floor(142 + (daysPassed * 3.5));
+    };
+
     return (
         <div className="relative">
             <Navbar />
-            <main className="min-h-screen bg-[#020617] flex items-center justify-center relative overflow-hidden pt-20">
+            <main className="min-h-screen bg-[#020617] flex flex-col items-center justify-start relative overflow-hidden pt-40 pb-40">
                 {/* Premium Background Elements */}
-                <div className="absolute top-0 left-0 w-full h-full">
+                <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
                     <motion.div
                         animate={{
                             scale: [1, 1.2, 1],
@@ -37,7 +46,7 @@ export default function SaasTools() {
                 </div>
 
                 {/* Grid Pattern */}
-                <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-20" />
+                <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-20 pointer-events-none" />
 
                 <div className="container relative z-10 px-6 mx-auto">
                     <div className="max-w-4xl mx-auto text-center">
@@ -119,7 +128,7 @@ export default function SaasTools() {
                                 <button
                                     disabled={isSubmitting || isSuccess}
                                     type="submit"
-                                    className="px-8 py-4 bg-brand-primary text-white rounded-2xl font-black flex items-center justify-center gap-2 hover:shadow-[0_0_20px_-5px_rgba(59,130,246,0.5)] transition-all disabled:opacity-50"
+                                    className="px-8 py-4 bg-brand-primary text-white rounded-2xl font-black flex items-center justify-center gap-2 hover:shadow-[0_0_20px_-5px_rgba(59,130,246,0.5)] transition-all disabled:opacity-50 min-w-[140px]"
                                 >
                                     {isSuccess ? "Joined!" : isSubmitting ? "Joining..." : <>Join Waitlist <ArrowRight size={20} /></>}
                                 </button>
@@ -128,13 +137,15 @@ export default function SaasTools() {
                                 <motion.div
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    className="mt-6 p-6 rounded-[2rem] bg-emerald-500/5 border border-emerald-500/20 text-center glass"
+                                    className="mt-8 p-8 rounded-[2.5rem] bg-emerald-500/5 border border-emerald-500/20 text-center glass relative overflow-hidden"
                                 >
-                                    <p className="text-emerald-400 font-black text-xl mb-1">Excellent. You're on the list.</p>
-                                    <div className="flex flex-col items-center gap-1">
-                                        <p className="text-slate-500 text-xs uppercase tracking-widest font-bold">Your Official Spot</p>
-                                        <span className="text-3xl font-black text-white">#1{Math.floor(Math.random() * 90) + 42}</span>
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 blur-[40px] rounded-full -mr-16 -mt-16" />
+                                    <p className="text-emerald-400 font-black text-2xl mb-2">Success!</p>
+                                    <p className="text-slate-400 text-sm mb-6 uppercase tracking-extra-widest font-bold">Your Official Launch Spot</p>
+                                    <div className="inline-flex items-center justify-center px-10 py-4 bg-white/5 border border-white/10 rounded-2xl shadow-inner">
+                                        <span className="text-5xl font-black text-white tracking-tighter">#{getWaitlistNumber()}</span>
                                     </div>
+                                    <p className="mt-6 text-slate-500 text-xs italic">We'll notify you as soon as early access begins.</p>
                                 </motion.div>
                             )}
                         </motion.div>
@@ -142,7 +153,7 @@ export default function SaasTools() {
                 </div>
 
                 {/* Decorative Elements */}
-                <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent pointer-events-none" />
             </main>
             <Footer />
         </div>
