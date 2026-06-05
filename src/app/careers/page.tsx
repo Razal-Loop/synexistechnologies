@@ -35,11 +35,23 @@ export default function Careers() {
         <main className="bg-background min-h-screen text-white relative overflow-hidden">
             <Navbar />
 
-            {/* Technical Illustration Background */}
-            <div
-                className="fixed inset-0 pointer-events-none opacity-[0.03]"
+            {/* Technical Illustration Background with Animation */}
+            <motion.div
+                initial={{ opacity: 0, scale: 1.1 }}
+                animate={{
+                    opacity: [0.03, 0.08, 0.03],
+                    scale: [1, 1.05, 1],
+                    x: [0, 20, 0],
+                    y: [0, -10, 0]
+                }}
+                transition={{
+                    duration: 15,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                }}
+                className="fixed inset-0 pointer-events-none"
                 style={{
-                    backgroundImage: `url('/careers_background_illustration_1780661966065.png')`,
+                    backgroundImage: `url('/careers_background_glowing.png')`,
                     backgroundSize: '800px',
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'right bottom'
