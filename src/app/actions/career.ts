@@ -2,8 +2,7 @@
 
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
+// Removed top-level instantiation to ensure runtime access
 export async function submitApplication(formData: FormData) {
     const fullName = formData.get("fullName") as string;
     const email = formData.get("email") as string;
@@ -17,8 +16,10 @@ export async function submitApplication(formData: FormData) {
 
     if (!process.env.RESEND_API_KEY) {
         console.error("CRITICAL: RESEND_API_KEY missing.");
-        return { success: false, error: "Configuration missing." };
+        return { success: false, error: "Server error: Missing API configuration." };
     }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     try {
         const { error } = await resend.emails.send({

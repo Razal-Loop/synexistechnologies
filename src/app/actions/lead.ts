@@ -2,7 +2,7 @@
 
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY || "re_123");
+// Moved instantiation inside actions to ensure fresh environment variable access in serverless environment
 
 export async function submitLead(formData: FormData) {
     const agencyName = formData.get("agencyName") as string;
@@ -17,9 +17,11 @@ export async function submitLead(formData: FormData) {
     const budget = formData.get("budget") as string;
 
     if (!process.env.RESEND_API_KEY) {
-        console.error("CRITICAL: RESEND_API_KEY is not defined.");
-        return { success: false, error: "Configuration missing." };
+        console.error("CRITICAL: RESEND_API_KEY is not defined in the environment.");
+        return { success: false, error: "Server error: Missing API configuration." };
     }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     try {
         const { error } = await resend.emails.send({
@@ -57,8 +59,10 @@ export async function submitWaitlist(formData: FormData) {
     const email = formData.get("email") as string;
 
     if (!process.env.RESEND_API_KEY) {
-        return { success: false, error: "Config missing." };
+        return { success: false, error: "Server error: Missing API configuration." };
     }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     try {
         const { error } = await resend.emails.send({
@@ -92,8 +96,10 @@ export async function submitReferral(formData: FormData) {
 
     if (!process.env.RESEND_API_KEY) {
         console.error("CRITICAL: RESEND_API_KEY is not defined in environment variables.");
-        return { success: false, error: "System configuration error. Please try again later." };
+        return { success: false, error: "Server error: Missing API configuration." };
     }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     try {
         const { error } = await resend.emails.send({
