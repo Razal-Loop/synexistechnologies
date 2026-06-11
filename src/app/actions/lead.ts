@@ -2,7 +2,7 @@
 
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY || "re_123");
 
 export async function submitLead(formData: FormData) {
     const agencyName = formData.get("agencyName") as string;
@@ -16,9 +16,14 @@ export async function submitLead(formData: FormData) {
     const mvpType = formData.get("mvpType") as string;
     const budget = formData.get("budget") as string;
 
+    if (!process.env.RESEND_API_KEY) {
+        console.error("CRITICAL: RESEND_API_KEY is not defined.");
+        return { success: false, error: "Configuration missing." };
+    }
+
     try {
         const { error } = await resend.emails.send({
-            from: "Synexis Leads <onboarding@resend.dev>",
+            from: "Synexis <onboarding@resend.dev>",
             to: ["contact@synexisdigital.com"],
             subject: `New Lead: ${agencyName} (${serviceType})`,
             html: `
@@ -43,17 +48,21 @@ export async function submitLead(formData: FormData) {
 
         return { success: true };
     } catch (err) {
-        console.error("Submission Error:", err);
-        return { success: false, error: "Failed to send email" };
+        console.error("Execution Error:", err);
+        return { success: false, error: "System failure." };
     }
 }
 
 export async function submitWaitlist(formData: FormData) {
     const email = formData.get("email") as string;
 
+    if (!process.env.RESEND_API_KEY) {
+        return { success: false, error: "Config missing." };
+    }
+
     try {
         const { error } = await resend.emails.send({
-            from: "Synexis Waitlist <onboarding@resend.dev>",
+            from: "Synexis <onboarding@resend.dev>",
             to: ["contact@synexisdigital.com"],
             subject: `New SaaS Waitlist Entry: ${email}`,
             html: `
@@ -81,9 +90,14 @@ export async function submitReferral(formData: FormData) {
     const clientContact = formData.get("clientContact") as string;
     const projectDetails = formData.get("projectDetails") as string;
 
+    if (!process.env.RESEND_API_KEY) {
+        console.error("CRITICAL: RESEND_API_KEY is not defined in environment variables.");
+        return { success: false, error: "System configuration error. Please try again later." };
+    }
+
     try {
         const { error } = await resend.emails.send({
-            from: "Synexis Referrals <onboarding@resend.dev>",
+            from: "Synexis <onboarding@resend.dev>",
             to: ["contact@synexisdigital.com"],
             subject: `New Referral from ${referrerEmail}`,
             html: `
@@ -98,13 +112,13 @@ export async function submitReferral(formData: FormData) {
         });
 
         if (error) {
-            console.error("Referral Error:", error);
+            console.error("Resend API Error:", error);
             return { success: false, error: error.message };
         }
 
         return { success: true };
     } catch (err) {
-        console.error("Referral Error:", err);
-        return { success: false, error: "Failed to submit referral" };
+        console.error("Action Execution Error:", err);
+        return { success: false, error: "An unexpected error occurred." };
     }
 }

@@ -15,9 +15,14 @@ export async function submitApplication(formData: FormData) {
     const cvLink = formData.get("cvLink") as string;
     const linkedin = formData.get("linkedin") as string;
 
+    if (!process.env.RESEND_API_KEY) {
+        console.error("CRITICAL: RESEND_API_KEY missing.");
+        return { success: false, error: "Configuration missing." };
+    }
+
     try {
         const { error } = await resend.emails.send({
-            from: "Synexis Careers <onboarding@resend.dev>",
+            from: "Synexis <onboarding@resend.dev>",
             to: ["contact@synexisdigital.com"],
             subject: `New Application: ${fullName} - ${position}`,
             html: `
@@ -36,13 +41,13 @@ export async function submitApplication(formData: FormData) {
         });
 
         if (error) {
-            console.error("Resend Application Error:", error);
+            console.error("Career Application Error:", error);
             return { success: false, error: error.message };
         }
 
         return { success: true };
     } catch (err) {
-        console.error("Career Submission Error:", err);
-        return { success: false, error: "Failed to send application" };
+        console.error("Execution Error:", err);
+        return { success: false, error: "System failure." };
     }
 }
