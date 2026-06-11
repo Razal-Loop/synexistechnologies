@@ -31,10 +31,11 @@ export default function Navbar() {
                     <Image
                         src="/logo.png"
                         alt="SYNEXIS DIGITAL Logo"
-                        width={300}
-                        height={100}
+                        width={600}
+                        height={200}
                         className="h-12 md:h-16 w-auto object-contain"
                         priority
+                        unoptimized
                     />
                 </Link>
 

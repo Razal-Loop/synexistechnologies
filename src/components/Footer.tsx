@@ -15,9 +15,10 @@ export default function Footer() {
                             <Image
                                 src="/logo.png"
                                 alt="SYNEXIS DIGITAL Logo"
-                                width={240}
-                                height={80}
+                                width={600}
+                                height={200}
                                 className="h-16 w-auto object-contain"
+                                unoptimized
                             />
                         </Link>
                         <p className="text-slate-400 text-xs text-center md:text-left leading-relaxed font-medium">
