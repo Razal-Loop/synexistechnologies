@@ -11,13 +11,13 @@ export default function Services() {
             description: "Production-grade Web and Mobile applications. High-performance enterprise solutions built to scale."
         },
         {
-            icon: <Megaphone className="w-10 h-10" />,
+            icon: <Megaphone className="w-10 h-10 text-brand-primary" />,
             title: "Digital Marketing",
             description: "High-performance advertising campaigns that dominate social media and search engines to generate steady, quality leads."
         },
         {
-            icon: <PhoneOutgoing className="w-8 h-8 text-brand-accent" />,
-            title: "Live Transfers",
+            icon: <PhoneOutgoing className="w-8 h-8 text-brand-primary" />,
+            title: "Sales",
             description: "High-intent live transfers connecting agencies and solo licensing agents with pre-qualified prospects."
         },
         {

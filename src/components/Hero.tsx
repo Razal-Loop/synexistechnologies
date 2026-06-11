@@ -76,17 +76,17 @@ export default function Hero() {
                 >
                     <div className="flex flex-col items-center gap-1">
                         <Code2 className="w-6 h-6 text-brand-primary mb-2" />
-                        <span className="text-xl font-bold text-white">Custom Dev</span>
+                        <span className="text-xl font-bold text-white">Custom Software Solutions</span>
                         <span className="text-sm text-slate-500">Tailored Scalability</span>
                     </div>
                     <div className="flex flex-col items-center gap-1">
-                        <Megaphone className="w-6 h-6 text-brand-secondary mb-2" />
-                        <span className="text-xl font-bold text-white">Digital Ads</span>
+                        <Megaphone className="w-6 h-6 text-brand-primary mb-2" />
+                        <span className="text-xl font-bold text-white">Digital Marketing</span>
                         <span className="text-sm text-slate-500">Hyper-Targeted</span>
                     </div>
                     <div className="flex flex-col items-center gap-1 md:col-span-1 col-span-2">
-                        <PhoneCall className="w-6 h-6 text-brand-accent mb-2" />
-                        <span className="text-xl font-bold text-white">Live Transfers</span>
+                        <PhoneCall className="w-6 h-6 text-brand-primary mb-2" />
+                        <span className="text-xl font-bold text-white">Sales</span>
                         <span className="text-sm text-slate-500">Instant Connection</span>
                     </div>
                 </motion.div>

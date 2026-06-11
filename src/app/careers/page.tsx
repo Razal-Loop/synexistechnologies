@@ -76,7 +76,7 @@ export default function Careers() {
                             Build the Future of <span className="text-brand-primary">Growth</span>
                         </h1>
                         <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-                            Join Synexis Technologies and help us engineer the most aggressive sales and technology engines on the planet.
+                            Join Synexis Digital and help us engineer the most aggressive sales and technology engines on the planet.
                         </p>
                     </div>
 

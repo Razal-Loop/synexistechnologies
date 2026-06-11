@@ -30,15 +30,12 @@ export default function Navbar() {
                 <Link href="/" className="flex items-center gap-3">
                     <Image
                         src="/logo.png"
-                        alt="SYNEXIS Logo"
-                        width={40}
-                        height={40}
-                        className="w-8 h-8 md:w-10 md:h-10 object-contain"
+                        alt="SYNEXIS DIGITAL Logo"
+                        width={300}
+                        height={100}
+                        className="h-14 md:h-20 w-auto object-contain"
+                        priority
                     />
-                    <div className="flex flex-col">
-                        <span className="text-lg md:text-xl font-black tracking-tighter text-white leading-none">SYNEXIS</span>
-                        <span className="text-[8px] md:text-[10px] font-bold tracking-[0.2em] text-brand-primary uppercase">Technologies</span>
-                    </div>
                 </Link>
 
                 <div className="hidden md:flex items-center gap-8">
@@ -46,7 +43,7 @@ export default function Navbar() {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-medium text-slate-300 hover:text-white transition-colors"
+                            className="text-sm font-medium text-slate-300 hover:text-brand-primary transition-colors"
                         >
                             {link.name}
                         </Link>
@@ -56,7 +53,7 @@ export default function Navbar() {
                 <div className="flex items-center gap-4">
                     <Link
                         href="#lead-form"
-                        className="hidden md:block px-5 py-2 bg-brand-primary hover:bg-brand-primary/90 text-white rounded-xl text-sm font-semibold transition-all hover:scale-105 active:scale-95"
+                        className="hidden md:block px-5 py-2 bg-brand-primary hover:bg-white text-white hover:text-brand-primary rounded-xl text-sm font-semibold transition-all hover:scale-105 active:scale-95"
                     >
                         Reserve Spot
                     </Link>

@@ -19,7 +19,7 @@ export async function submitLead(formData: FormData) {
     try {
         const { error } = await resend.emails.send({
             from: "Synexis Leads <onboarding@resend.dev>",
-            to: ["official.razalali@gmail.com"], // Updated to a likely email based on corpus name, or user can change
+            to: ["contact@synexisdigital.com"],
             subject: `New Lead: ${agencyName} (${serviceType})`,
             html: `
                 <h1>New Lead Inquiry</h1>
@@ -54,7 +54,7 @@ export async function submitWaitlist(formData: FormData) {
     try {
         const { error } = await resend.emails.send({
             from: "Synexis Waitlist <onboarding@resend.dev>",
-            to: ["official.razalali@gmail.com"],
+            to: ["contact@synexisdigital.com"],
             subject: `New SaaS Waitlist Entry: ${email}`,
             html: `
                 <h1>New Waitlist Entry</h1>
@@ -84,7 +84,7 @@ export async function submitReferral(formData: FormData) {
     try {
         const { error } = await resend.emails.send({
             from: "Synexis Referrals <onboarding@resend.dev>",
-            to: ["official.razalali@gmail.com"],
+            to: ["contact@synexisdigital.com"],
             subject: `New Referral from ${referrerEmail}`,
             html: `
                 <h1>New Project Referral</h1>

@@ -1,13 +1,39 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
+// ── Engineering & Dev Stack ──────────────────────────────────────
 const techStack = [
-    "Next.js", "React", "TypeScript", "Tailwind CSS",
-    "Node.js", "Supabase", "PostgreSQL", "Python",
-    "Framer Motion", "Lucide React", "Vercel", "OpenAI",
-    "Resend", "Cloudflare", "Docker", "Git", "Radix UI",
-    "Zustand", "Prisma", "Redis"
+    { name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", category: "tech" },
+    { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", category: "tech" },
+    { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", category: "tech" },
+    { name: "Tailwind", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg", category: "tech" },
+    { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", category: "tech" },
+    { name: "Supabase", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg", category: "tech" },
+    { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg", category: "tech" },
+    { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", category: "tech" },
+    { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", category: "tech" },
+    { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", category: "tech" },
+    { name: "Redis", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg", category: "tech" },
+    { name: "Prisma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg", category: "tech" },
+    { name: "Vercel", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg", category: "tech" },
+    { name: "OpenAI", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openai/openai-original.svg", category: "tech" },
+    { name: "GraphQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg", category: "tech" },
+    { name: "Figma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", category: "tech" },
+    // ── Social Media & Digital Marketing ──────────────────────────
+    { name: "Instagram", logo: "https://cdn.simpleicons.org/instagram/E4405F", category: "social" },
+    { name: "Facebook", logo: "https://cdn.simpleicons.org/facebook/1877F2", category: "social" },
+    { name: "TikTok", logo: "https://cdn.simpleicons.org/tiktok/ffffff", category: "social" },
+    { name: "YouTube", logo: "https://cdn.simpleicons.org/youtube/FF0000", category: "social" },
+    { name: "X / Twitter", logo: "https://cdn.simpleicons.org/x/ffffff", category: "social" },
+    { name: "LinkedIn", logo: "https://cdn.simpleicons.org/linkedin/0A66C2", category: "social" },
+    { name: "Meta Ads", logo: "https://cdn.simpleicons.org/meta/0467DF", category: "social" },
+    { name: "Google Ads", logo: "https://cdn.simpleicons.org/googleads/4285F4", category: "social" },
+    { name: "Snapchat", logo: "https://cdn.simpleicons.org/snapchat/FFFC00", category: "social" },
+    { name: "WhatsApp", logo: "https://cdn.simpleicons.org/whatsapp/25D366", category: "social" },
+    { name: "Shopify", logo: "https://cdn.simpleicons.org/shopify/96BF48", category: "social" },
+    { name: "Mailchimp", logo: "https://cdn.simpleicons.org/mailchimp/FFE01B", category: "social" },
 ];
 
 const WaterParticle = () => (
@@ -28,7 +54,7 @@ const WaterParticle = () => (
     />
 );
 
-const TechLog = ({ tech, index }: { tech: string; index: number }) => (
+const TechLog = ({ tech, index }: { tech: { name: string; logo: string; category: string }; index: number }) => (
     <motion.div
         initial={{ y: -200, x: (Math.random() - 0.5) * 40 }}
         animate={{
@@ -58,15 +84,23 @@ const TechLog = ({ tech, index }: { tech: string; index: number }) => (
         }}
         className="absolute group"
     >
-        <div className="relative px-5 py-3 rounded-xl bg-blue-900/30 border border-blue-400/20 backdrop-blur-md shadow-[0_0_20px_rgba(59,130,246,0.1)] flex flex-col items-center">
-            {/* Glossy overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-xl" />
+        <div className="flex flex-col items-center gap-1.5">
+            {/* Technology Logo */}
+            <div className="relative w-9 h-9 flex-shrink-0">
+                <Image
+                    src={tech.logo}
+                    alt={tech.name}
+                    fill
+                    sizes="36px"
+                    className="object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]"
+                    unoptimized
+                />
+            </div>
 
-            <span className="text-[8px] font-mono text-blue-300/40 mb-1 tracking-tighter">0xINFRA_{index}</span>
-            <span className="text-xs font-black text-white/90 tracking-widest uppercase">{tech}</span>
-
-            {/* Water "Drip" effect on the log */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[2px] bg-blue-400/30 blur-[1px]" />
+            {/* Technology Name */}
+            <span className="text-[7px] font-black tracking-widest uppercase whitespace-nowrap text-white/50">
+                {tech.name}
+            </span>
         </div>
     </motion.div>
 );
@@ -87,7 +121,7 @@ export default function TechWaterfall() {
             {/* Tech Logs Floating in the Stream */}
             <div className="absolute inset-0 flex justify-center">
                 {techStack.map((tech, i) => (
-                    <TechLog key={tech} tech={tech} index={i} />
+                    <TechLog key={tech.name} tech={tech} index={i} />
                 ))}
             </div>
 

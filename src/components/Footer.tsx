@@ -14,15 +14,11 @@ export default function Footer() {
                         <Link href="/" className="flex items-center gap-3">
                             <Image
                                 src="/logo.png"
-                                alt="SYNEXIS Logo"
-                                width={40}
-                                height={40}
-                                className="w-10 h-10 object-contain shadow-[0_0_15px_rgba(37,99,235,0.3)]"
+                                alt="SYNEXIS DIGITAL Logo"
+                                width={240}
+                                height={80}
+                                className="h-16 w-auto object-contain"
                             />
-                            <div className="flex flex-col">
-                                <span className="text-2xl font-black tracking-tighter text-white leading-none">SYNEXIS</span>
-                                <span className="text-[10px] font-bold tracking-[0.2em] text-brand-primary uppercase">Technologies</span>
-                            </div>
                         </Link>
                         <p className="text-slate-400 text-xs text-center md:text-left leading-relaxed font-medium">
                             Connecting People. Powering Solutions. We build the engineering and marketing ecosystems that scale businesses globally.
@@ -60,7 +56,7 @@ export default function Footer() {
                             <Link href="/careers" className="text-slate-400 hover:text-brand-primary text-xs transition-colors font-bold uppercase tracking-wider">
                                 Open Positions
                             </Link>
-                            <a href="mailto:official.razalali@gmail.com" className="text-white hover:text-brand-primary text-xs transition-colors font-black flex items-center gap-2 mt-2">
+                            <a href="mailto:contact@synexisdigital.com" className="text-white hover:text-brand-primary text-xs transition-colors font-black flex items-center gap-2 mt-2">
                                 <Mail className="w-3 h-3 text-brand-primary" />
                                 Support
                             </a>
@@ -71,7 +67,7 @@ export default function Footer() {
 
                 <div className="pt-8 border-t border-slate-900/50 flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-slate-600 text-[10px] font-bold uppercase tracking-[0.2em]">
-                        © 2026 SYNEXIS TECHNOLOGIES. ALL RIGHTS RESERVED.
+                        © 2026 SYNEXIS DIGITAL. ALL RIGHTS RESERVED.
                     </p>
                     <div className="flex items-center gap-6">
                         <span className="flex items-center gap-2 text-[10px] font-black text-emerald-400/50 uppercase tracking-widest">

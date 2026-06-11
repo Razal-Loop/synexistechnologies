@@ -1,9 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-primary: #007bff;
-  --color-brand-secondary: #001d3d;
-  --color-brand-accent: #00c2ff;
+  /* ── Brand Colors ─────────────────────────────────────── */
+  --color-brand-primary: #742C99;
+  /* vivid purple — buttons, links, glows   */
+  --color-brand-secondary: #000000;
+  /* deep black — core background           */
+  --color-brand-accent: #e0d0f0;
+  /* soft lavender tint — text on black     */
+  --color-brand-dark: #111111;
+  /* mid charcoal — cards, surfaces         */
+  --color-brand-darkest: #000000;
+  /* absolute black                         */
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -46,48 +54,48 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #020617;
-  --card: #ffffff;
-  --card-foreground: #020617;
-  --popover: #ffffff;
-  --popover-foreground: #020617;
-  --primary: #3b82f6;
+  --background: #000000;
+  --foreground: #e0d0f0;
+  --card: #111111;
+  --card-foreground: #e0d0f0;
+  --popover: #000000;
+  --popover-foreground: #e0d0f0;
+  --primary: #742C99;
   --primary-foreground: #ffffff;
-  --secondary: #f1f5f9;
-  --secondary-foreground: #020617;
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
-  --accent: #f1f5f9;
-  --accent-foreground: #020617;
-  --destructive: #020617;
-  --destructive-foreground: #f1f5f9;
-  --border: #e2e8f0;
-  --input: #e2e8f0;
-  --ring: #3b82f6;
+  --secondary: #111111;
+  --secondary-foreground: #e0d0f0;
+  --muted: #111111;
+  --muted-foreground: #a080c0;
+  --accent: #742C99;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #e0d0f0;
+  --border: #3a1a50;
+  --input: #3a1a50;
+  --ring: #742C99;
   --radius: 0.5rem;
 }
 
 .dark {
-  --background: #020617;
-  --foreground: #f8fafc;
-  --card: #0f172a;
-  --card-foreground: #f8fafc;
-  --popover: #020617;
-  --popover-foreground: #f8fafc;
-  --primary: #3b82f6;
+  --background: #000000;
+  --foreground: #e0d0f0;
+  --card: #080808;
+  --card-foreground: #e0d0f0;
+  --popover: #000000;
+  --popover-foreground: #e0d0f0;
+  --primary: #742C99;
   --primary-foreground: #ffffff;
-  --secondary: #1e293b;
-  --secondary-foreground: #f8fafc;
-  --muted: #1e293b;
-  --muted-foreground: #94a3b8;
-  --accent: #1e293b;
-  --accent-foreground: #f8fafc;
+  --secondary: #111111;
+  --secondary-foreground: #e0d0f0;
+  --muted: #111111;
+  --muted-foreground: #a080c0;
+  --accent: #742C99;
+  --accent-foreground: #ffffff;
   --destructive: #ef4444;
-  --destructive-foreground: #f8fafc;
-  --border: #1e293b;
-  --input: #1e293b;
-  --ring: #3b82f6;
+  --destructive-foreground: #e0d0f0;
+  --border: #3a1a50;
+  --input: #3a1a50;
+  --ring: #742C99;
 }
 
 @layer base {
@@ -102,11 +110,11 @@
 }
 
 .glass {
-  background: rgba(15, 23, 42, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(116, 44, 153, 0.25);
 }
 
 .hero-gradient {
-  background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  background: radial-gradient(circle at 50% 50%, rgba(116, 44, 153, 0.18) 0%, transparent 55%);
 }

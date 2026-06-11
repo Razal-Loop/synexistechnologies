@@ -40,10 +40,10 @@ function ParticlesInner() {
             },
             particles: {
                 color: {
-                    value: "#2563eb",
+                    value: "#742C99",
                 },
                 links: {
-                    color: "#2563eb",
+                    color: "#742C99",
                     distance: 200,
                     enable: true,
                     opacity: 0.8,

@@ -61,6 +61,15 @@ const projects = [
         tags: ["Meta Ads", "Google Ads", "Conversion Optimization"],
         stats: "$2.4M Generated Revenue",
         link: "#"
+    },
+    {
+        title: "ZAAR",
+        category: "Software",
+        description: "Bringing Greenery to Every Home in Pakistan. A sustainable plant e-commerce platform promoting eco-friendly living — from sourcing to doorstep delivery — with integrated plant care education and mindful packaging.",
+        image: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&q=80&w=2000",
+        tags: ["E-commerce", "Sustainability", "Pakistan"],
+        stats: "Nationwide Green Launch",
+        link: "https://zaarpk.com"
     }
 ];
 
