@@ -56,6 +56,9 @@ export default function Footer() {
                             <Link href="/careers" className="text-slate-400 hover:text-brand-primary text-xs transition-colors font-bold uppercase tracking-wider">
                                 Open Positions
                             </Link>
+                            <Link href="https://www.goodfirms.co/company/synexis-digital" target="_blank" className="text-slate-400 hover:text-brand-primary text-xs transition-colors font-bold uppercase tracking-wider">
+                                GoodFirms
+                            </Link>
                             <a href="mailto:contact@synexisdigital.com" className="text-white hover:text-brand-primary text-xs transition-colors font-black flex items-center gap-2 mt-2">
                                 <Mail className="w-3 h-3 text-brand-primary" />
                                 Support
