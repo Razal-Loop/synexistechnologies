@@ -31,9 +31,9 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-8 bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-slate-500 leading-[1.1]"
+                    className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-8 text-white leading-[1.1]"
                 >
-                    Connecting <span className="text-brand-primary bg-clip-text">People</span>. <br /> <span className="text-brand-primary bg-clip-text">Powering</span> Solutions.
+                    Connecting <span className="text-brand-primary">People</span>. <br /> <span className="text-brand-primary">Powering</span> Solutions.
                 </motion.h1>
 
                 <motion.p
