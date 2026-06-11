@@ -24,7 +24,7 @@ export async function submitApplication(formData: FormData) {
     try {
         const { error } = await resend.emails.send({
             from: "Synexis <onboarding@resend.dev>",
-            to: ["contact@synexisdigital.com"],
+            to: ["official.razalali@gmail.com"],
             subject: `New Application: ${fullName} - ${position}`,
             html: `
                 <h1>New Job Application</h1>
