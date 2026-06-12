@@ -24,28 +24,21 @@ export default function SaasTools() {
         <div className="relative">
             <Navbar />
             <main className="min-h-screen bg-[#020617] flex flex-col items-center justify-start relative overflow-hidden pt-40 pb-40">
-                {/* Premium Background Elements */}
-                <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-                    <motion.div
-                        animate={{
-                            scale: [1, 1.2, 1],
-                            opacity: [0.3, 0.5, 0.3]
-                        }}
-                        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-                        className="absolute -top-[20%] -left-[10%] w-[60%] h-[60%] bg-brand-primary/20 blur-[120px] rounded-full"
-                    />
-                    <motion.div
-                        animate={{
-                            scale: [1, 1.3, 1],
-                            opacity: [0.2, 0.4, 0.2]
-                        }}
-                        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                        className="absolute -bottom-[20%] -right-[10%] w-[60%] h-[60%] bg-blue-600/10 blur-[120px] rounded-full"
-                    />
+                {/* Premium Video Background */}
+                <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover opacity-30 grayscale-[0.5]"
+                    >
+                        <source src="/208682_medium.mp4" type="video/mp4" />
+                    </video>
+                    {/* Overlay for better contrast */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#020617] via-transparent to-[#020617] opacity-60" />
+                    <div className="absolute inset-0 bg-[#020617]/40" />
                 </div>
-
-                {/* Grid Pattern */}
-                <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-20 pointer-events-none" />
 
                 <div className="container relative z-10 px-6 mx-auto">
                     <div className="max-w-4xl mx-auto text-center">
