@@ -28,14 +28,11 @@ export default function Navbar() {
                 className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-white shadow-lg mx-4 mt-4 rounded-2xl border border-slate-200"
             >
                 <Link href="/" className="flex items-center gap-3">
-                    <Image
+                    <img
                         src="/logo.png"
                         alt="SYNEXIS DIGITAL Logo"
-                        width={600}
-                        height={200}
                         className="h-12 md:h-16 w-auto object-contain"
-                        priority
-                        unoptimized
+                        style={{ imageRendering: '-webkit-optimize-contrast' }}
                     />
                 </Link>
 

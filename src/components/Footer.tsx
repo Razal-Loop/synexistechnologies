@@ -12,13 +12,11 @@ export default function Footer() {
                     {/* Brand Info */}
                     <div className="md:col-span-1 flex flex-col gap-6 items-center md:items-start">
                         <Link href="/" className="flex items-center gap-3">
-                            <Image
+                            <img
                                 src="/logo.png"
                                 alt="SYNEXIS DIGITAL Logo"
-                                width={600}
-                                height={200}
                                 className="h-16 w-auto object-contain"
-                                unoptimized
+                                style={{ imageRendering: '-webkit-optimize-contrast' }}
                             />
                         </Link>
                         <p className="text-slate-400 text-xs text-center md:text-left leading-relaxed font-medium">
