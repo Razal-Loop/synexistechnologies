@@ -31,6 +31,8 @@ export default function ReferPage() {
                         loop
                         muted
                         playsInline
+                        preload="none"
+                        poster="/refer-poster.png"
                         className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover opacity-50"
                     >
                         <source src="/208082_medium.mp4" type="video/mp4" />

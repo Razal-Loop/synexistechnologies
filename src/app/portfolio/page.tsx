@@ -89,6 +89,8 @@ export default function PortfolioPage() {
                     muted
                     loop
                     playsInline
+                    preload="none"
+                    poster="/portfolio-poster.png"
                     className="w-full h-full object-cover opacity-60 mix-blend-screen"
                 >
                     <source src="/mixkit-stars-in-space-background-1610-4k.mp4" type="video/mp4" />

@@ -14,6 +14,7 @@ export default function Hero() {
                     muted
                     loop
                     playsInline
+                    preload="metadata"
                     className="w-full h-full object-cover opacity-60 mix-blend-screen"
                 >
                     <source src="/mixkit-busy-office-space-918-hd-ready.mp4" type="video/mp4" />
