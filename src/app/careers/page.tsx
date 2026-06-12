@@ -30,6 +30,14 @@ export default function Careers() {
             type: "Full-time",
             description: "Expert negotiation and closing skills required for managing high-value software project deals and enterprise solutions."
         },
+        {
+            title: "Sales Closer (Lead Transfers)",
+            team: "Sales Operations",
+            location: "On-site (Rawalpindi)",
+            openings: "1 Position",
+            type: "Full-time",
+            description: "Convert high-intent transfers into successful deals. Master the high-performance sales engine that powers our insurance ecosystem."
+        },
     ];
 
     return (
