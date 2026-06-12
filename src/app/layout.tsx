@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "Custom software development, high-performance Digital Marketing, and high-intent live transfers for agencies and solo agents.",
   keywords: ["Software Development", "Digital Marketing", "Live Transfers", "Insurance Marketing", "Synexis Digital"],
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.png",
   },
 };
 
