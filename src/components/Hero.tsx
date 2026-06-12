@@ -33,7 +33,7 @@ export default function Hero() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-8 text-white leading-[1.1]"
                 >
-                    Connecting <span className="text-brand-primary">People</span>. <br /> <span className="text-brand-primary">Powering</span> Solutions.
+                    Connecting <span className="text-brand-primary">People.</span> <br /> <span className="text-brand-primary">Powering</span> Solutions.
                 </motion.h1>
 
                 <motion.p
