@@ -13,7 +13,7 @@ export default function Offer() {
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight">The Growth Ecosystem</h2>
-                    <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+                    <p className="text-slate-100 text-lg max-w-2xl mx-auto font-medium">
                         We don&apos;t just sell leads. We build the high-conversion infrastructure that powers your entire agency.
                     </p>
                 </div>
@@ -143,7 +143,7 @@ export default function Offer() {
 
                             <div className="mb-10 min-h-[120px]">
                                 <h3 className="text-3xl font-black text-white mb-3 italic tracking-tighter uppercase">{item.title}</h3>
-                                <p className="text-slate-400 text-sm leading-relaxed">{item.description}</p>
+                                <p className="text-slate-200 text-sm leading-relaxed font-medium">{item.description}</p>
                             </div>
 
 
@@ -152,7 +152,7 @@ export default function Offer() {
                                 {item.features.map((feature, fIdx) => (
                                     <div key={fIdx} className="flex items-center gap-4">
                                         <CheckCircle2 className="w-5 h-5 text-brand-primary flex-shrink-0" />
-                                        <span className="text-slate-300 font-bold text-sm tracking-tight">{feature}</span>
+                                        <span className="text-slate-100 font-bold text-sm tracking-tight">{feature}</span>
                                     </div>
                                 ))}
                             </div>
@@ -164,7 +164,7 @@ export default function Offer() {
                                 {item.buttonText}
                             </a>
 
-                            <p className="text-center text-[10px] text-slate-500 font-black uppercase tracking-widest">
+                            <p className="text-center text-[10px] text-slate-300 font-black uppercase tracking-widest">
                                 {item.footerText}
                             </p>
                         </motion.div>

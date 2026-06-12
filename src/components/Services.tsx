@@ -66,7 +66,7 @@ export default function Services() {
             <div className="relative z-10 max-w-7xl mx-auto">
                 <div className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-black text-white mb-6">Our Services</h2>
-                    <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+                    <p className="text-slate-100 text-lg max-w-2xl mx-auto font-medium">
                         Advanced technology meets aggressive sales execution.
                     </p>
                 </div>
@@ -95,7 +95,7 @@ export default function Services() {
                             </div>
 
                             <h3 className="relative text-2xl font-black text-white mb-4 tracking-tight drop-shadow-md">{service.title}</h3>
-                            <p className="relative text-slate-400 leading-relaxed font-medium drop-shadow-sm">
+                            <p className="relative text-slate-100 leading-relaxed font-medium drop-shadow-sm">
                                 {service.description}
                             </p>
                         </motion.div>

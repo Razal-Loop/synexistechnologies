@@ -75,7 +75,7 @@ export default function Careers() {
                         <h1 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter">
                             Build the Future of <span className="text-brand-primary">Growth</span>
                         </h1>
-                        <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-slate-100 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">
                             Join Synexis Digital and help us engineer the most aggressive sales and technology engines on the planet.
                         </p>
                     </div>
@@ -105,7 +105,7 @@ export default function Careers() {
                                         <h3 className="text-2xl font-black mb-3 group-hover:text-brand-primary transition-colors">
                                             {job.title}
                                         </h3>
-                                        <p className="text-slate-400 mb-6 max-w-xl">
+                                        <p className="text-slate-200 mb-6 max-w-xl font-medium">
                                             {job.description}
                                         </p>
                                         <div className="flex items-center gap-4 text-sm text-slate-500 font-medium">
@@ -135,7 +135,7 @@ export default function Careers() {
                     {/* Placeholder for no more jobs */}
                     <div className="mt-16 p-12 rounded-3xl border-2 border-dashed border-slate-800 text-center">
                         <h4 className="text-xl font-bold mb-2">Don&apos;t see your role?</h4>
-                        <p className="text-slate-500 mb-8">We&apos;re always looking for exceptional talent in Engineering, Marketing, and Sales.</p>
+                        <p className="text-slate-300 mb-8 font-medium">We&apos;re always looking for exceptional talent in Engineering, Marketing, and Sales.</p>
                         <button
                             onClick={() => setIsOpenApplyOpen(true)}
                             className="text-brand-primary font-black hover:underline underline-offset-4"
