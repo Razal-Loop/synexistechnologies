@@ -24,10 +24,20 @@ export default function ReferPage() {
         <div className="relative">
             <Navbar />
             <main className="min-h-screen bg-[#020617] flex flex-col items-center justify-start relative overflow-hidden pt-40 pb-40">
-                {/* Background Decorations */}
-                <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-                    <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-brand-primary/10 blur-[120px] rounded-full" />
-                    <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-emerald-500/10 blur-[120px] rounded-full" />
+                {/* Premium Video Background */}
+                <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover opacity-50"
+                    >
+                        <source src="/208082_medium.mp4" type="video/mp4" />
+                    </video>
+                    {/* Overlay for better contrast */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#020617] via-transparent to-[#020617] opacity-40" />
+                    <div className="absolute inset-0 bg-[#020617]/20" />
                 </div>
 
                 <div className="container relative z-10 px-6 mx-auto">

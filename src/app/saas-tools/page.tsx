@@ -31,13 +31,13 @@ export default function SaasTools() {
                         loop
                         muted
                         playsInline
-                        className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover opacity-30 grayscale-[0.5]"
+                        className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover opacity-60"
                     >
                         <source src="/208682_medium.mp4" type="video/mp4" />
                     </video>
                     {/* Overlay for better contrast */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-[#020617] via-transparent to-[#020617] opacity-60" />
-                    <div className="absolute inset-0 bg-[#020617]/40" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#020617] via-transparent to-[#020617] opacity-40" />
+                    <div className="absolute inset-0 bg-[#020617]/20" />
                 </div>
 
                 <div className="container relative z-10 px-6 mx-auto">
