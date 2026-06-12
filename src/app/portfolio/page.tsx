@@ -110,7 +110,7 @@ export default function PortfolioPage() {
                     >
                         Our <span className="text-brand-primary">Work</span>
                     </motion.h1>
-                    <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+                    <p className="text-slate-100 text-lg max-w-2xl mx-auto font-medium">
                         A showcase of the engineering and marketing systems we&apos;ve built to scale hundreds of businesses globally.
                     </p>
                 </div>
@@ -166,7 +166,7 @@ export default function PortfolioPage() {
                                         </span>
                                     </div>
                                     <h3 className="text-3xl font-black text-white mb-2 italic tracking-tighter uppercase">{project.title}</h3>
-                                    <p className="text-slate-400 text-sm mb-6 line-clamp-2">{project.description}</p>
+                                    <p className="text-slate-200 text-sm mb-6 line-clamp-2">{project.description}</p>
 
                                     <div className="flex items-center justify-between mt-6">
                                         <div className="flex flex-wrap gap-2">
