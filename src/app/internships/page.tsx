@@ -30,6 +30,14 @@ export default function Internships() {
             type: "Internship (3 Months)",
             description: "Work with modern tech stacks (React, Next.js, Node.js) to build scalable web applications. Help engineering the most aggressive sales and technology engines."
         },
+        {
+            title: "Content Writing & SEO Intern",
+            team: "Marketing Operations",
+            location: "On-site (Rawalpindi)",
+            openings: "1 Seat",
+            type: "Internship (3 Months)",
+            description: "Master the art of high-conversion copywriting and SEO. Learn how to rank content and drive organic growth for international brands."
+        },
     ];
 
     return (
