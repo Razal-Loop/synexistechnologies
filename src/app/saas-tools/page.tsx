@@ -65,7 +65,7 @@ export default function SaasTools() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed"
+                            className="text-lg md:text-xl text-slate-100 max-w-2xl mx-auto mb-12 leading-relaxed font-medium"
                         >
                             We&apos;re building a suite of high-performance tools designed to automate, optimize, and scale modern businesses. Proprietary tech, built by engineers, for growth-obsessed agencies.
                         </motion.p>
