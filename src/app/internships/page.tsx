@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Briefcase, MapPin, Clock, ArrowRight, Sparkles, GraduationCap } from "lucide-react";
+import { Briefcase, MapPin, Clock, ArrowRight, GraduationCap } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ApplyModal from "@/components/ApplyModal";
