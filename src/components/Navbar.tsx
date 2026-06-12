@@ -16,6 +16,7 @@ export default function Navbar() {
         { name: "Portfolio", href: "/portfolio" },
         { name: "Referral", href: "/refer" },
         { name: "Careers", href: "/careers" },
+        { name: "Internships", href: "/internships" },
         { name: "Contact", href: "/#lead-form" },
     ];
 

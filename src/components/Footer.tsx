@@ -55,6 +55,9 @@ export default function Footer() {
                             <Link href="/careers" className="text-slate-400 hover:text-brand-primary text-xs transition-colors font-bold uppercase tracking-wider">
                                 Open Positions
                             </Link>
+                            <Link href="/internships" className="text-slate-400 hover:text-brand-primary text-xs transition-colors font-bold uppercase tracking-wider">
+                                Internships
+                            </Link>
                             <Link href="https://www.goodfirms.co/company/synexis-digital" target="_blank" className="text-slate-400 hover:text-brand-primary text-xs transition-colors font-bold uppercase tracking-wider">
                                 GoodFirms
                             </Link>
