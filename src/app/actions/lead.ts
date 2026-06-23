@@ -25,8 +25,8 @@ export async function submitLead(formData: FormData) {
 
     try {
         const { error } = await resend.emails.send({
-            from: "Synexis <notifications@synexisdigital.com>",
-            to: ["contact@synexisdigital.com"],
+            from: "Web Axis Solutions <contact@webaxissolutions.com>",
+            to: ["contact@webaxissolutions.com"],
             subject: `New Lead: ${agencyName} (${serviceType})`,
             html: `
                 <h1>New Lead Inquiry</h1>
@@ -66,13 +66,13 @@ export async function submitWaitlist(formData: FormData) {
 
     try {
         const { error } = await resend.emails.send({
-            from: "Synexis <notifications@synexisdigital.com>",
-            to: ["contact@synexisdigital.com"],
+            from: "Web Axis Solutions <contact@webaxissolutions.com>",
+            to: ["contact@webaxissolutions.com"],
             subject: `New SaaS Waitlist Entry: ${email}`,
             html: `
                 <h1>New Waitlist Entry</h1>
                 <p><strong>Email:</strong> ${email}</p>
-                <p>This user wants early access to Synexis SaaS Tools.</p>
+                <p>This user wants early access to Web Axis Solutions SaaS Tools.</p>
             `,
         });
 
@@ -103,8 +103,8 @@ export async function submitReferral(formData: FormData) {
 
     try {
         const { error } = await resend.emails.send({
-            from: "Synexis <notifications@synexisdigital.com>",
-            to: ["contact@synexisdigital.com"],
+            from: "Web Axis Solutions <contact@webaxissolutions.com>",
+            to: ["contact@webaxissolutions.com"],
             subject: `New Referral from ${referrerEmail}`,
             html: `
                 <h1>New Project Referral</h1>

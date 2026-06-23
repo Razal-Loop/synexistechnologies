@@ -3,12 +3,14 @@
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     const navLinks = [
+        { name: "About Us", href: "/#about" },
         { name: "Services", href: "/#services" },
         { name: "The Ecosystem", href: "/#offer" },
         { name: "SaaS Tools", href: "/saas-tools" },
@@ -25,14 +27,16 @@ export default function Navbar() {
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-white shadow-lg mx-4 mt-4 rounded-2xl border border-slate-200"
+                className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-2 bg-white shadow-lg mx-4 mt-4 rounded-2xl border border-slate-200"
             >
-                <Link href="/" className="flex items-center gap-3">
-                    <img
+                <Link href="/" className="flex items-center gap-3 md:ml-6 ml-2">
+                    <Image
                         src="/logo.png"
-                        alt="SYNEXIS DIGITAL Logo"
-                        className="h-12 md:h-16 w-auto object-contain"
-                        style={{ imageRendering: '-webkit-optimize-contrast' }}
+                        alt="Web Axis Solutions Logo"
+                        width={168}
+                        height={96}
+                        className="h-14 md:h-24 w-auto object-contain"
+                        priority
                     />
                 </Link>
 
@@ -48,7 +52,7 @@ export default function Navbar() {
                     ))}
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 md:mr-6 mr-2">
                     <Link
                         href="#lead-form"
                         className="hidden md:block px-5 py-2 bg-brand-primary hover:bg-slate-900 text-white rounded-xl text-sm font-bold transition-all hover:scale-105 active:scale-95 shadow-md shadow-brand-primary/20"

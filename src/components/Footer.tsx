@@ -2,20 +2,22 @@
 
 import { Mail } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
     return (
-        <footer id="contact" className="py-20 px-6 border-t border-slate-800 bg-slate-950/80 backdrop-blur-xl relative z-10">
+        <footer id="contact" className="py-20 px-6 border-t border-slate-800 bg-black relative z-10">
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                     {/* Brand Info */}
                     <div className="md:col-span-1 flex flex-col gap-6 items-center md:items-start">
                         <Link href="/" className="flex items-center gap-3">
-                            <img
-                                src="/logo.png"
-                                alt="SYNEXIS DIGITAL Logo"
-                                className="h-16 w-auto object-contain"
-                                style={{ imageRendering: '-webkit-optimize-contrast' }}
+                            <Image
+                                src="/footer-logo.png"
+                                alt="Web Axis Solutions Logo"
+                                width={80}
+                                height={80}
+                                className="h-20 w-auto object-contain rounded-2xl"
                             />
                         </Link>
                         <p className="text-slate-400 text-xs text-center md:text-left leading-relaxed font-medium">
@@ -57,10 +59,10 @@ export default function Footer() {
                             <Link href="/internships" className="text-slate-400 hover:text-brand-primary text-xs transition-colors font-bold uppercase tracking-wider">
                                 Internships
                             </Link>
-                            <Link href="https://www.goodfirms.co/company/synexis-digital" target="_blank" className="text-slate-400 hover:text-brand-primary text-xs transition-colors font-bold uppercase tracking-wider">
+                            <Link href="https://www.goodfirms.co/company/web-axis-solutions" target="_blank" className="text-slate-400 hover:text-brand-primary text-xs transition-colors font-bold uppercase tracking-wider">
                                 GoodFirms
                             </Link>
-                            <a href="mailto:contact@synexisdigital.com" className="text-white hover:text-brand-primary text-xs transition-colors font-black flex items-center gap-2 mt-2">
+                            <a href="mailto:contact@webaxissolutions.com" className="text-white hover:text-brand-primary text-xs transition-colors font-black flex items-center gap-2 mt-2">
                                 <Mail className="w-3 h-3 text-brand-primary" />
                                 Support
                             </a>
@@ -71,7 +73,7 @@ export default function Footer() {
 
                 <div className="pt-8 border-t border-slate-900/50 flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-slate-600 text-[10px] font-bold uppercase tracking-[0.2em]">
-                        © 2026 SYNEXIS DIGITAL. ALL RIGHTS RESERVED.
+                        © 2026 WEB AXIS SOLUTIONS. ALL RIGHTS RESERVED.
                     </p>
                     <div className="flex items-center gap-6">
                         <span className="flex items-center gap-2 text-[10px] font-black text-emerald-400/50 uppercase tracking-widest">

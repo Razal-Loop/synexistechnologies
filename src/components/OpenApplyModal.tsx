@@ -70,7 +70,7 @@ export default function OpenApplyModal({ isOpen, onClose }: OpenApplyModalProps)
                                 </div>
                                 <div>
                                     <h2 className="text-3xl font-black text-white tracking-tight">Open Application</h2>
-                                    <p className="text-slate-400 text-sm">Tell us how you can help Synexis grow.</p>
+                                    <p className="text-slate-400 text-sm">Tell us how you can help Web Axis Solutions grow.</p>
                                 </div>
                             </div>
                             <button

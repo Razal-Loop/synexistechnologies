@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import AboutUs from "@/components/AboutUs";
 import Offer from "@/components/Offer";
 import Services from "@/components/Services";
 import LeadForm from "@/components/LeadForm";
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <ProjectTicker />
       <div className="relative z-10 bg-background">
+        <AboutUs />
         <Offer />
         <Services />
         <LeadForm />

@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SYNEXIS Digital | Software, Marketing & Live Transfers",
+  title: "Web Axis Solutions | Software, Marketing & Live Transfers",
   description: "Custom software development, high-performance Digital Marketing, and high-intent live transfers for agencies and solo agents.",
-  keywords: ["Software Development", "Digital Marketing", "Live Transfers", "Insurance Marketing", "Synexis Digital"],
+  keywords: ["Software Development", "Digital Marketing", "Live Transfers", "Insurance Marketing", "Web Axis Solutions"],
   icons: {
     icon: "/favicon.png",
   },
