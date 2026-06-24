@@ -21,9 +21,6 @@ export const metadata: Metadata = {
     icon: "/favicon.png",
     apple: "/favicon.png",
   },
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -48,6 +45,31 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Web Axis Solutions",
+  "url": "https://webaxissolutions.com",
+  "logo": "https://webaxissolutions.com/logo.png",
+  "description": "Custom software development, high-performance Digital Marketing, and high-intent live transfers for agencies and solo agents.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "PK"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "contact@webaxissolutions.com",
+    "contactType": "customer service"
+  }
+};
+
+const websiteLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Web Axis Solutions",
+  "url": "https://webaxissolutions.com"
+};
+
 import { Analytics } from "@vercel/analytics/next";
 
 export default function RootLayout({
@@ -61,6 +83,14 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground selection:bg-brand-primary/30 selection:text-brand-primary">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
+        />
         {children}
         <Analytics />
       </body>
