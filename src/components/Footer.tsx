@@ -82,10 +82,10 @@ export default function Footer() {
                                     className="h-auto w-40 opacity-70 hover:opacity-100 transition-opacity"
                                 />
                             </a>
-                            <Link href="/#lead-form" className="text-white hover:text-brand-primary text-xs transition-colors font-black flex items-center gap-2 mt-2">
+                            <a href="mailto:contact@webaxissolutions.com" className="text-white hover:text-brand-primary text-xs transition-colors font-black flex items-center gap-2 mt-2">
                                 <Mail className="w-3 h-3 text-brand-primary" />
                                 Support
-                            </Link>
+                            </a>
                             <p className="text-slate-600 text-[10px] mt-2 uppercase tracking-tight font-bold">24/7 Global Operations</p>
                         </div>
                     </div>
