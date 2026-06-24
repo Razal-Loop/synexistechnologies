@@ -23,6 +23,17 @@ export default function Footer() {
                         <p className="text-slate-400 text-xs text-center md:text-left leading-relaxed font-medium">
                             Connecting People. Powering Solutions. We build the engineering and marketing ecosystems that scale businesses globally.
                         </p>
+                        <Link
+                            href="https://www.instagram.com/webaxis_solutions/"
+                            target="_blank"
+                            className="bg-white/5 hover:bg-brand-primary p-3 rounded-xl transition-all group border border-white/5 hover:border-brand-primary/50 w-fit"
+                        >
+                            <img
+                                src="https://cdn.simpleicons.org/instagram/ffffff"
+                                alt="Instagram"
+                                className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity"
+                            />
+                        </Link>
                     </div>
 
                     {/* Solutions */}
