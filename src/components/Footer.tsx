@@ -62,6 +62,15 @@ export default function Footer() {
                             <Link href="https://www.goodfirms.co/company/web-axis-solutions" target="_blank" className="text-slate-400 hover:text-brand-primary text-xs transition-colors font-bold uppercase tracking-wider">
                                 GoodFirms
                             </Link>
+                            <a href="https://websitelaunches.com/site/webaxissolutions.com" target="_blank" rel="noopener" className="mt-2 block">
+                                <img
+                                    src="https://websitelaunches.com/badge/webaxissolutions.com.svg"
+                                    alt="Established online - Public launch record"
+                                    width="255"
+                                    height="55"
+                                    className="h-auto w-40 opacity-70 hover:opacity-100 transition-opacity"
+                                />
+                            </a>
                             <a href="mailto:contact@webaxissolutions.com" className="text-white hover:text-brand-primary text-xs transition-colors font-black flex items-center gap-2 mt-2">
                                 <Mail className="w-3 h-3 text-brand-primary" />
                                 Support
