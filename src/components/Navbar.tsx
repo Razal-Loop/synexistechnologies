@@ -54,6 +54,18 @@ export default function Navbar() {
 
                 <div className="flex items-center gap-4 md:mr-6 mr-2">
                     <Link
+                        href="https://www.instagram.com/webaxis_solutions/"
+                        target="_blank"
+                        className="hidden md:flex bg-slate-50 hover:bg-brand-primary p-2 rounded-lg transition-all group border border-slate-200/50 hover:border-brand-primary/50"
+                    >
+                        <img
+                            src="https://cdn.simpleicons.org/instagram/000000"
+                            alt="Instagram"
+                            className="w-4 h-4 group-hover:invert transition-all opacity-70 group-hover:opacity-100"
+                        />
+                    </Link>
+
+                    <Link
                         href="#lead-form"
                         className="hidden md:block px-5 py-2 bg-brand-primary hover:bg-slate-900 text-white rounded-xl text-sm font-bold transition-all hover:scale-105 active:scale-95 shadow-md shadow-brand-primary/20"
                     >
