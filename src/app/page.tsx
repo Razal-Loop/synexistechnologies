@@ -8,8 +8,41 @@ import Footer from "@/components/Footer";
 import ProjectTicker from "@/components/ProjectTicker";
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Web Axis Solutions",
+    "url": "https://webaxissolutions.com",
+    "logo": "https://webaxissolutions.com/logo.png",
+    "description": "Custom software development, high-performance Digital Marketing, and high-intent live transfers for agencies and solo agents.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "PK"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "contact@webaxissolutions.com",
+      "contactType": "customer service"
+    }
+  };
+
+  const websiteLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Web Axis Solutions",
+    "url": "https://webaxissolutions.com"
+  };
+
   return (
     <main className="relative">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
+      />
       <Navbar />
       <Hero />
       <ProjectTicker />

@@ -13,11 +13,38 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://webaxissolutions.com"),
   title: "Web Axis Solutions | Software, Marketing & Live Transfers",
   description: "Custom software development, high-performance Digital Marketing, and high-intent live transfers for agencies and solo agents.",
-  keywords: ["Software Development", "Digital Marketing", "Live Transfers", "Insurance Marketing", "Web Axis Solutions"],
+  keywords: ["Software Development", "Digital Marketing", "Live Transfers", "Insurance Marketing", "Web Axis Solutions", "SaaS Development", "Lead Generation"],
   icons: {
     icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://webaxissolutions.com",
+    title: "Web Axis Solutions | Software, Marketing & Live Transfers",
+    description: "Custom software development, high-performance Digital Marketing, and high-intent live transfers for agencies and solo agents.",
+    siteName: "Web Axis Solutions",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Web Axis Solutions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Web Axis Solutions | Software, Marketing & Live Transfers",
+    description: "Custom software development, high-performance Digital Marketing, and high-intent live transfers for agencies and solo agents.",
+    images: ["/logo.png"],
   },
 };
 
