@@ -39,12 +39,20 @@ export default function Internships() {
             description: "Master the art of high-conversion copywriting and SEO. Learn how to rank content and drive organic growth for international brands."
         },
         {
-            title: "Sales Closer Intern",
+            title: "Software Sales Closer",
             team: "Sales Operations",
             location: "On-site (Rawalpindi)",
             openings: "1 Seat",
             type: "Internship (3 Months)",
             description: "Develop high-level negotiation skills and learn the art of closing complex software and digital marketing deals with global clients."
+        },
+        {
+            title: "App Development Intern",
+            team: "Engineering",
+            location: "On-site (Rawalpindi)",
+            openings: "1 Seat",
+            type: "Internship (3 Months)",
+            description: "Work on mobile and web applications with a focus on delivering high-performance digital products. Strong skills in app development are required."
         },
     ];
 

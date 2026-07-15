@@ -15,12 +15,12 @@ export default function Careers() {
 
     const positions = [
         {
-            title: "Sales Agent (Live Transfers - Insurance)",
+            title: "Software Sales Lead Gen",
             team: "Sales Operations",
             location: "On-site (Rawalpindi)",
-            openings: "5 Positions",
+            openings: "Multiple Positions",
             type: "Full-time",
-            description: "Convert high-intent insurance leads into active clients. Experience in life/health insurance is a plus."
+            description: "Identify and qualify high-potential software leads. Drive outbound sales campaigns and generate qualified opportunities."
         },
         {
             title: "Software Project Closer (Sales)",
@@ -31,12 +31,12 @@ export default function Careers() {
             description: "Expert negotiation and closing skills required for managing high-value software project deals and enterprise solutions."
         },
         {
-            title: "Sales Closer (Lead Transfers)",
+            title: "Appointment setter",
             team: "Sales Operations",
             location: "On-site (Rawalpindi)",
-            openings: "1 Position",
+            openings: "Multiple Positions",
             type: "Full-time",
-            description: "Convert high-intent transfers into successful deals. Master the high-performance sales engine that powers our insurance ecosystem."
+            description: "Engage with prospects, manage scheduling, and set up qualified appointments for our closing team."
         },
     ];
 

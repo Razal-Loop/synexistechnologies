@@ -60,7 +60,7 @@ export default function ReferPage() {
                             className="text-5xl md:text-7xl font-black text-white tracking-tighter mb-8"
                         >
                             Refer a Project. <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500">Earn 20% Commission.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500">Earn 10% Commission.</span>
                         </motion.h1>
 
                         <motion.p
@@ -69,12 +69,12 @@ export default function ReferPage() {
                             transition={{ delay: 0.2 }}
                             className="text-lg md:text-xl text-slate-100 max-w-2xl mx-auto mb-12 font-medium"
                         >
-                            We value our network. For every project you refer that joins our ecosystem, we&apos;ll reward you with a 20% share of the initial project value. No cap, no complexity.
+                            We value our network. For every project you refer that joins our ecosystem, we&apos;ll reward you with a 10% share of the initial project value. No cap, no complexity.
                         </motion.p>
 
                         <div className="grid md:grid-cols-3 gap-6 text-left">
                             {[
-                                { icon: Gift, title: "High Commission", desc: "Get 20% revenue share on closed contracts." },
+                                { icon: Gift, title: "High Commission", desc: "Get 10% revenue share on closed contracts." },
                                 { icon: ShieldCheck, title: "Trust & Transparency", desc: "Formal agreements and timely payouts." },
                                 { icon: Rocket, title: "Scale with Us", desc: "Exclusive perks for recurring partners." }
                             ].map((item, i) => (

@@ -9,6 +9,24 @@ import Image from "next/image";
 
 const projects = [
     {
+        title: "Synexis Digital Tools",
+        category: "Software",
+        description: "High-performance, privacy-first developer toolkit ecosystem. 100% client-side browser tools for JSON formatting, code beautification, security utilities, encoding, and more.",
+        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=2000",
+        tags: ["Developer Tools", "Client-Side", "Privacy-First"],
+        stats: "50+ Free Tools",
+        link: "https://www.synexisdigital.com/"
+    },
+    {
+        title: "ComplDoc",
+        category: "Software",
+        description: "Expert technical compliance and regulatory documentation platform for the EU AI Act, government tenders, and aviation operating manuals.",
+        image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=2000",
+        tags: ["Regulatory", "Compliance", "Documentation"],
+        stats: "Audit-Ready Expositions",
+        link: "https://www.compldoc.com/"
+    },
+    {
         title: "MyMeds Pharmacy",
         category: "Software",
         description: "A full-scale pharmaceutical e-commerce and telehealth platform. Engineered for secure prescription handling, real-time inventory, and seamless patient onboarding.",
