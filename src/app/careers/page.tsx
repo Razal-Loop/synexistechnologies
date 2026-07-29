@@ -15,14 +15,6 @@ export default function Careers() {
 
     const positions = [
         {
-            title: "Software Sales Lead Gen",
-            team: "Sales Operations",
-            location: "On-site (Rawalpindi)",
-            openings: "Multiple Positions",
-            type: "Full-time",
-            description: "Identify and qualify high-potential software leads. Drive outbound sales campaigns and generate qualified opportunities."
-        },
-        {
             title: "Software Project Closer (Sales)",
             team: "Sales Operations",
             location: "On-site (Rawalpindi)",

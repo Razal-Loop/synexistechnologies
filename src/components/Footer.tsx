@@ -29,8 +29,19 @@ export default function Footer() {
                             className="bg-white/5 hover:bg-brand-primary p-3 rounded-xl transition-all group border border-white/5 hover:border-brand-primary/50 w-fit"
                         >
                             <img
-                                src="https://cdn.simpleicons.org/instagram/ffffff"
+                                src="https://cdn.simpleicons.org/instagram/fffff"
                                 alt="Instagram"
+                                className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity"
+                            />
+                        </Link>
+                        <Link
+                            href="https://www.linkedin.com/company/web-axis-solutions/"
+                            target="_blank"
+                            className="bg-white/5 hover:bg-brand-primary p-3 rounded-xl transition-all group border border-white/5 hover:border-brand-primary/50 w-fit"
+                        >
+                            <img
+                                src="https://cdn.simpleicons.org/linkedin/fffff"
+                                alt="linkedin"
                                 className="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity"
                             />
                         </Link>
