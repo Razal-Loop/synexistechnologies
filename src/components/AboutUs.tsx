@@ -83,8 +83,7 @@ export default function AboutUs() {
                         <span className="text-brand-primary font-bold">
                             Pakistan Software Export Board (PSEB)
                         </span>
-                        . We engineer world-class software, supercharge digital marketing, and power high-intent
-                        live transfer ecosystems — connecting people and powering solutions globally.
+                        . We engineer world-class software, supercharge digital marketing and business process automations. connecting people and powering solutions globally
                     </motion.p>
                 </div>
 
