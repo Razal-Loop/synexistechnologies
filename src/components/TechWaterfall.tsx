@@ -27,7 +27,7 @@ const techStack = [
     { name: "TikTok", logo: "https://cdn.simpleicons.org/tiktok/ffffff", category: "social" },
     { name: "YouTube", logo: "https://cdn.simpleicons.org/youtube/FF0000", category: "social" },
     { name: "X / Twitter", logo: "https://cdn.simpleicons.org/x/ffffff", category: "social" },
-    { name: "LinkedIn", logo: "https://cdn.simpleicons.org/linkedin/0A66C2", category: "social" },
+    { name: "LinkedIn", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg", category: "social" },
     { name: "Meta Ads", logo: "https://cdn.simpleicons.org/meta/0467DF", category: "social" },
     { name: "Google Ads", logo: "https://cdn.simpleicons.org/googleads/4285F4", category: "social" },
     { name: "Snapchat", logo: "https://cdn.simpleicons.org/snapchat/FFFC00", category: "social" },
