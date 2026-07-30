@@ -17,8 +17,8 @@ export default function Services() {
         },
         {
             icon: <PhoneOutgoing className="w-8 h-8 text-brand-primary" />,
-            title: "Sales",
-            description: "High-intent live transfers connecting agencies and solo licensing agents with pre-qualified prospects."
+            title: "Business Process Automation",
+            description: "Automate repetitive tasks and streamline workflows. Increase efficiency and productivity with custom automation solutions."
         },
         {
             icon: <Rocket className="w-8 h-8 text-brand-primary" />,
