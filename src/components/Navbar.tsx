@@ -52,7 +52,7 @@ export default function Navbar() {
                     ))}
                 </div>
 
-                <div className="flex items-center gap-4 md:mr-6 mr-2">
+                <div className="flex items-center gap-3 md:mr-6 mr-2">
                     <Link
                         href="https://www.instagram.com/webaxis_solutions/"
                         target="_blank"
@@ -61,6 +61,18 @@ export default function Navbar() {
                         <img
                             src="https://cdn.simpleicons.org/instagram/000000"
                             alt="Instagram"
+                            className="w-4 h-4 group-hover:invert transition-all opacity-70 group-hover:opacity-100"
+                        />
+                    </Link>
+
+                    <Link
+                        href="https://www.linkedin.com/company/web-axis-solutions/"
+                        target="_blank"
+                        className="hidden md:flex bg-slate-50 hover:bg-brand-primary p-2 rounded-lg transition-all group border border-slate-200/50 hover:border-brand-primary/50"
+                    >
+                        <img
+                            src="https://cdn.simpleicons.org/linkedin/000000"
+                            alt="LinkedIn"
                             className="w-4 h-4 group-hover:invert transition-all opacity-70 group-hover:opacity-100"
                         />
                     </Link>
@@ -98,6 +110,30 @@ export default function Navbar() {
                             {link.name}
                         </Link>
                     ))}
+                    <div className="flex items-center gap-4">
+                        <Link
+                            href="https://www.instagram.com/webaxis_solutions/"
+                            target="_blank"
+                            className="bg-white/10 hover:bg-brand-primary p-3 rounded-xl transition-all group border border-white/10"
+                        >
+                            <img
+                                src="https://cdn.simpleicons.org/instagram/ffffff"
+                                alt="Instagram"
+                                className="w-6 h-6 opacity-80 group-hover:opacity-100"
+                            />
+                        </Link>
+                        <Link
+                            href="https://www.linkedin.com/company/web-axis-solutions/"
+                            target="_blank"
+                            className="bg-white/10 hover:bg-brand-primary p-3 rounded-xl transition-all group border border-white/10"
+                        >
+                            <img
+                                src="https://cdn.simpleicons.org/linkedin/ffffff"
+                                alt="LinkedIn"
+                                className="w-6 h-6 opacity-80 group-hover:opacity-100"
+                            />
+                        </Link>
+                    </div>
                     <Link
                         href="#lead-form"
                         onClick={() => setIsOpen(false)}
