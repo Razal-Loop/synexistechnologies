@@ -22,15 +22,15 @@ export default function Offer() {
                     {[
                         {
                             icon: <Zap className="w-12 h-12 text-brand-primary opacity-20" />,
-                            title: "Lead Transfers",
-                            description: "High-intent real-time live transfers connecting you with pre-qualified prospects instantly.",
+                            title: "Business Process Automation",
+                            description: "Automate repetitive tasks and streamline workflows. Increase efficiency and productivity with custom automation solutions.",
                             features: [
-                                "Pre-Qualified Prospects",
-                                "Instant Connection Logic",
-                                "Filtered by High-Intent"
+                                "Automate Repetitive Tasks",
+                                "Streamline Workflows",
+                                "Increase Efficiency and Productivity"
                             ],
-                            buttonText: "Start Scaling",
-                            footerText: "Premium leads for high-performance teams."
+                            buttonText: "Start Automating",
+                            footerText: "Custom automation solutions for growing businesses."
                         },
                         {
                             icon: <Megaphone className="w-12 h-12 text-brand-primary opacity-20" />,
