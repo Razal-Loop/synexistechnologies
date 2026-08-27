@@ -18,7 +18,7 @@ export default function Navbar() {
         { name: "Referral", href: "/refer" },
         { name: "Careers", href: "/careers" },
         { name: "Internships", href: "/internships" },
-        { name: "Contact", href: "/#lead-form" },
+        { name: "Book Call", href: "/book" },
     ];
 
     return (
@@ -76,10 +76,10 @@ export default function Navbar() {
                     </Link>
 
                     <Link
-                        href="#lead-form"
+                        href="/book"
                         className="hidden md:block px-5 py-2 bg-brand-primary hover:bg-slate-900 text-white rounded-xl text-sm font-bold transition-all hover:scale-105 active:scale-95 shadow-md shadow-brand-primary/20"
                     >
-                        Reserve Spot
+                        Book Call
                     </Link>
 
                     <button
@@ -131,11 +131,11 @@ export default function Navbar() {
                         </Link>
                     </div>
                     <Link
-                        href="#lead-form"
+                        href="/book"
                         onClick={() => setIsOpen(false)}
                         className="w-full py-5 bg-brand-primary text-white rounded-2xl font-black text-xl text-center"
                     >
-                        Reserve Your Spot
+                        Book Consultation
                     </Link>
                 </div>
             </motion.div>

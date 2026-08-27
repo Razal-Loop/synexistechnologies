@@ -48,6 +48,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/book`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
 
     // ─── GEO Knowledge Hub ─────────────────────────────────────
     {

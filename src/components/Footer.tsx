@@ -75,6 +75,9 @@ export default function Footer() {
                     <div className="flex flex-col gap-6 items-center md:items-start text-center md:text-left">
                         <h4 className="text-white font-black uppercase text-[10px] tracking-widest italic opacity-50">Company</h4>
                         <div className="flex flex-col gap-3">
+                            <Link href="/book" className="text-slate-400 hover:text-brand-primary text-xs transition-colors font-bold uppercase tracking-wider">
+                                Book Strategic Call
+                            </Link>
                             <Link href="/careers" className="text-slate-400 hover:text-brand-primary text-xs transition-colors font-bold uppercase tracking-wider">
                                 Open Positions
                             </Link>
