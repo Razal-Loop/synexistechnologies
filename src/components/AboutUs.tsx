@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building2, BadgeCheck, Globe2, ShieldCheck } from "lucide-react";
+import { Building2, Globe2, ShieldCheck } from "lucide-react";
 
 const stats = [
     { label: "US Location", value: "Idaho", sub: "9169 W State St #2926, Garden City" },
@@ -11,18 +11,6 @@ const stats = [
 ];
 
 const pillars = [
-    {
-        icon: <Building2 className="w-7 h-7 text-brand-primary" />,
-        title: "Incorporated & Compliant",
-        description:
-            "Web Axis Solutions is a fully compliant technology and digital services firm, adhering to standard corporate practices and regulations.",
-    },
-    {
-        icon: <BadgeCheck className="w-7 h-7 text-brand-primary" />,
-        title: "US Headquartered",
-        description:
-            "Based out of Idaho, USA, establishing a reliable local presence for clients across North America and Western Europe.",
-    },
     {
         icon: <ShieldCheck className="w-7 h-7 text-brand-primary" />,
         title: "24/7 Global Operations",
