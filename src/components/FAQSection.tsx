@@ -20,12 +20,10 @@ interface FAQSectionProps {
 
 function FAQItem({
   faq,
-  index,
   headingId,
   panelId,
 }: {
   faq: FAQ;
-  index: number;
   headingId: string;
   panelId: string;
 }) {
@@ -129,7 +127,6 @@ export default function FAQSection({
                 <FAQItem
                   key={i}
                   faq={faq}
-                  index={i}
                   headingId={`${uid}-q-${i}`}
                   panelId={`${uid}-a-${i}`}
                 />
@@ -140,7 +137,6 @@ export default function FAQSection({
                 <FAQItem
                   key={i + half}
                   faq={faq}
-                  index={i + half}
                   headingId={`${uid}-q-${i + half}`}
                   panelId={`${uid}-a-${i + half}`}
                 />
@@ -153,7 +149,6 @@ export default function FAQSection({
               <FAQItem
                 key={i}
                 faq={faq}
-                index={i}
                 headingId={`${uid}-q-${i}`}
                 panelId={`${uid}-a-${i}`}
               />

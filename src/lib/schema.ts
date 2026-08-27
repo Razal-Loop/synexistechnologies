@@ -6,16 +6,18 @@
 
 export const SITE = {
   name: "Web Axis Solutions",
-  legalName: "Web Axis Solutions (Pvt.) Ltd.",
+  legalName: "Web Axis Solutions",
   url: "https://webaxissolutions.com",
   logo: "https://webaxissolutions.com/logo.png",
   email: "contact@webaxissolutions.com",
-  telephone: "+92-000-0000000",
+  telephone: "+1-208-000-0000",
   description:
     "Web Axis Solutions builds custom software, runs high-performance digital marketing campaigns, and delivers business process automation for agencies and enterprises globally.",
-  addressCountry: "PK",
-  addressLocality: "Rawalpindi",
-  addressRegion: "Punjab",
+  addressCountry: "US",
+  addressLocality: "Garden City",
+  addressRegion: "ID",
+  streetAddress: "9169 W State St #2926",
+  postalCode: "83714",
   sameAs: [
     "https://www.linkedin.com/company/web-axis-solutions/",
     "https://www.instagram.com/webaxis_solutions/",
@@ -47,6 +49,8 @@ export function organizationSchema() {
       addressCountry: SITE.addressCountry,
       addressLocality: SITE.addressLocality,
       addressRegion: SITE.addressRegion,
+      streetAddress: SITE.streetAddress,
+      postalCode: SITE.postalCode,
     },
     contactPoint: {
       "@type": "ContactPoint",

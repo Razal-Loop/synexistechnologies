@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
-import FAQSection from "@/components/FAQSection";
-import { breadcrumbSchema, articleSchema, faqSchema } from "@/lib/schema";
+import { breadcrumbSchema } from "@/lib/schema";
 import { BookOpen, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {

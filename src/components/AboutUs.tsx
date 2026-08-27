@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { Building2, BadgeCheck, Globe2, ShieldCheck } from "lucide-react";
 
 const stats = [
-    { label: "Registered With", value: "SECP", sub: "Securities & Exchange Commission of Pakistan" },
-    { label: "Certified By", value: "PSEB", sub: "Pakistan Software Export Board" },
-    { label: "Company Type", value: "Pvt. Ltd.", sub: "Private Limited Company" },
-    { label: "Operations", value: "Global", sub: "Serving clients worldwide" },
+    { label: "US Location", value: "Idaho", sub: "9169 W State St #2926, Garden City" },
+    { label: "Company Type", value: "Agency", sub: "Custom Software & Marketing" },
+    { label: "Operations", value: "24/7", sub: "Round-the-clock global support" },
+    { label: "Reach", value: "Global", sub: "Serving clients worldwide" },
 ];
 
 const pillars = [
@@ -15,25 +15,25 @@ const pillars = [
         icon: <Building2 className="w-7 h-7 text-brand-primary" />,
         title: "Incorporated & Compliant",
         description:
-            "Web Axis Solutions (Pvt.) Ltd. is a formally incorporated private limited company, fully registered and compliant under Pakistani corporate law.",
+            "Web Axis Solutions is a fully compliant technology and digital services firm, adhering to standard corporate practices and regulations.",
     },
     {
         icon: <BadgeCheck className="w-7 h-7 text-brand-primary" />,
-        title: "SECP Registered",
+        title: "US Headquartered",
         description:
-            "Registered with the Securities & Exchange Commission of Pakistan (SECP), ensuring full legal standing and corporate transparency.",
+            "Based out of Idaho, USA, establishing a reliable local presence for clients across North America and Western Europe.",
     },
     {
         icon: <ShieldCheck className="w-7 h-7 text-brand-primary" />,
-        title: "PSEB Certified",
+        title: "24/7 Global Operations",
         description:
-            "Recognized by the Pakistan Software Export Board (PSEB), affirming our position as a certified technology and software services company.",
+            "Our cross-functional teams operate around the clock, guaranteeing seamless support, communication, and project continuity across time zones.",
     },
     {
         icon: <Globe2 className="w-7 h-7 text-brand-primary" />,
         title: "Global Reach",
         description:
-            "Though headquartered in Pakistan, our solutions power businesses across North America, Europe, and the Middle East — built to scale.",
+            "Our custom software systems and digital marketing engines scale businesses worldwide, from high-growth startups to established enterprises.",
     },
 ];
 
@@ -63,8 +63,7 @@ export default function AboutUs() {
                         viewport={{ once: true }}
                         className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter"
                     >
-                        Who We{" "}
-                        <span className="text-brand-primary">Are</span>
+                        Who We <span className="text-brand-primary">Are</span>
                     </motion.h2>
 
                     <motion.p
@@ -74,16 +73,7 @@ export default function AboutUs() {
                         viewport={{ once: true }}
                         className="text-slate-300 text-lg max-w-3xl mx-auto font-medium leading-relaxed"
                     >
-                        <strong className="text-white">Web Axis Solutions (Pvt.) Ltd.</strong> is a private limited
-                        company registered with the{" "}
-                        <span className="text-brand-primary font-bold">
-                            Securities &amp; Exchange Commission of Pakistan (SECP)
-                        </span>{" "}
-                        and certified by the{" "}
-                        <span className="text-brand-primary font-bold">
-                            Pakistan Software Export Board (PSEB)
-                        </span>
-                        . We engineer world-class software, supercharge digital marketing and business process automations. connecting people and powering solutions globally
+                        <strong className="text-white">Web Axis Solutions</strong> is a custom software development, digital marketing, and business process automation agency. Headquartered in Idaho, USA, we engineer world-class software, supercharge digital marketing campaigns, and design efficient automations — connecting people and powering solutions globally.
                     </motion.p>
                 </div>
 

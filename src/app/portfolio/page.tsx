@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
-import PortfolioClient, { projects } from "./PortfolioClient";
+import PortfolioClient from "./PortfolioClient";
+import { projects } from "@/lib/projects";
 import { breadcrumbSchema, itemListSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {

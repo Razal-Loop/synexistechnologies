@@ -19,7 +19,7 @@ import {
 export const metadata: Metadata = {
   title: "Custom Software, Digital Marketing & Business Automation",
   description:
-    "Web Axis Solutions builds production-grade custom software, runs high-performance digital marketing campaigns, and delivers business process automation. SECP registered. PSEB certified. Serving US, UK, and global clients.",
+    "Web Axis Solutions builds production-grade custom software, runs high-performance digital marketing campaigns, and delivers business process automation. Headquartered in Idaho, USA, serving US, UK, and global clients.",
   alternates: {
     canonical: "https://webaxissolutions.com",
   },
@@ -53,9 +53,9 @@ const HOME_FAQS = [
       "Yes. We build AI-powered automation workflows using n8n, Zapier, Make (Integromat), and custom APIs. This includes AI lead qualification, automated follow-up sequences, chatbots, and voice AI integrations.",
   },
   {
-    question: "Is Web Axis Solutions a registered company?",
+    question: "Where is Web Axis Solutions headquartered?",
     answer:
-      "Yes. Web Axis Solutions (Pvt.) Ltd. is formally incorporated and registered with the Securities & Exchange Commission of Pakistan (SECP) and certified by the Pakistan Software Export Board (PSEB).",
+      "Web Axis Solutions is headquartered in Garden City, Idaho, USA, at 9169 W State St #2926, serving clients globally with round-the-clock operations.",
   },
   {
     question: "Does Web Axis Solutions work with international clients?",
