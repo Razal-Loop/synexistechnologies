@@ -28,15 +28,34 @@ const MONTH_NAMES = [
 const WEEK_DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 const TIME_SLOTS = [
-  "9:00 AM",
   "10:00 AM",
   "11:00 AM",
+  "12:00 PM",
   "1:00 PM",
   "2:00 PM",
-  "3:00 PM",
-  "4:00 PM",
-  "5:00 PM",
 ];
+
+// Helper to get current Date in USA Eastern Time
+const getUSDate = (date = new Date()) => {
+  const formatter = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+    hour12: false,
+  });
+  const parts = formatter.formatToParts(date);
+  const val: Record<string, number> = {};
+  for (const part of parts) {
+    if (part.type !== "literal") {
+      val[part.type] = parseInt(part.value, 10);
+    }
+  }
+  return new Date(val.year, val.month - 1, val.day, val.hour, val.minute, val.second);
+};
 
 // Helper to get days in a month
 const getDaysInMonth = (year: number, month: number) => {
@@ -49,7 +68,7 @@ const getStartDayOfMonth = (year: number, month: number) => {
 };
 
 export default function BookPage() {
-  const today = new Date();
+  const today = getUSDate();
   const currentYear = today.getFullYear();
   const currentMonth = today.getMonth();
   const currentDay = today.getDate();
@@ -105,6 +124,40 @@ export default function BookPage() {
     const checkDate = new Date(navYear, navMonth, day);
     const dayOfWeek = checkDate.getDay();
     return dayOfWeek === 0 || dayOfWeek === 6; // Sunday or Saturday
+  };
+
+  const isSlotPast = (slot: string) => {
+    if (!selectedDate) return false;
+    const usToday = getUSDate();
+    const isToday =
+      selectedDate.getDate() === usToday.getDate() &&
+      selectedDate.getMonth() === usToday.getMonth() &&
+      selectedDate.getFullYear() === usToday.getFullYear();
+
+    if (!isToday) return false;
+
+    const [time, modifier] = slot.split(" ");
+    const [hoursStr, minutesStr] = time.split(":");
+    let hours = parseInt(hoursStr, 10);
+    const minutes = parseInt(minutesStr, 10);
+    if (modifier === "PM" && hours < 12) {
+      hours += 12;
+    }
+    if (modifier === "AM" && hours === 12) {
+      hours = 0;
+    }
+
+    const currentUSHour = usToday.getHours();
+    const currentUSMinute = usToday.getMinutes();
+
+    if (hours < currentUSHour) {
+      return true;
+    }
+    if (hours === currentUSHour && minutes <= currentUSMinute) {
+      return true;
+    }
+
+    return false;
   };
 
   const handleDateClick = (day: number) => {
@@ -368,12 +421,17 @@ export default function BookPage() {
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="flex items-center justify-between mb-6">
-                    <h3 className="text-xl font-bold text-white flex items-center gap-2">
-                      <Clock className="w-5 h-5 text-brand-primary" />
-                      Select Time Slot
-                    </h3>
-                    <span className="text-sm font-bold text-brand-primary bg-brand-primary/10 px-4 py-1.5 border border-brand-primary/20 rounded-full">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                    <div>
+                      <h3 className="text-xl font-bold text-white flex items-center gap-2">
+                        <Clock className="w-5 h-5 text-brand-primary" />
+                        Select Time Slot
+                      </h3>
+                      <p className="text-xs text-slate-500 mt-1">
+                        All times are in US Eastern Time (ET)
+                      </p>
+                    </div>
+                    <span className="text-sm font-bold text-brand-primary bg-brand-primary/10 px-4 py-1.5 border border-brand-primary/20 rounded-full self-start sm:self-auto">
                       {selectedDate?.toLocaleDateString("en-US", {
                         weekday: "short",
                         month: "short",
@@ -386,13 +444,17 @@ export default function BookPage() {
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                     {TIME_SLOTS.map((slot) => {
                       const isSelected = selectedTimeSlot === slot;
+                      const isPast = isSlotPast(slot);
                       return (
                         <button
                           key={slot}
+                          disabled={isPast}
                           onClick={() => handleTimeSlotClick(slot)}
                           className={`py-4 px-6 rounded-2xl text-sm font-bold transition-all border text-center ${
                             isSelected
                               ? "bg-brand-primary text-white border-brand-primary shadow-[0_0_15px_rgba(37,99,235,0.4)] scale-105"
+                              : isPast
+                              ? "text-slate-700 border-transparent cursor-not-allowed bg-slate-900/10"
                               : "text-slate-300 border-slate-800 hover:border-brand-primary/50 hover:bg-brand-primary/5 bg-slate-900/30"
                           }`}
                         >
@@ -427,7 +489,7 @@ export default function BookPage() {
                         })}
                       </span>
                       <span className="text-xs font-black text-brand-primary">
-                        at {selectedTimeSlot}
+                        at {selectedTimeSlot} (ET)
                       </span>
                     </div>
                   </div>
@@ -573,7 +635,7 @@ export default function BookPage() {
                       </div>
                       <div>
                         <span className="text-xs text-slate-500 font-bold uppercase tracking-widest block">Time Slot</span>
-                        <span className="text-sm font-bold text-white">{selectedTimeSlot}</span>
+                        <span className="text-sm font-bold text-white">{selectedTimeSlot} (Eastern Time)</span>
                       </div>
                     </div>
                   </div>
